@@ -10,7 +10,7 @@ namespace SimpleShortcutMenu01
     /// <summary>
     /// [MainMenu] ラベルプロパティ設定クラス
     /// </summary>
-    class MainMenuLabel : Label
+    public class MainMenuLabel : Label
     {
         /// <summary>
         /// ラベル用イベントセット

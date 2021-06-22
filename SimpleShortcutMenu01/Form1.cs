@@ -21,6 +21,10 @@ namespace SimpleShortcutMenu01
         public Form1()
         {
             InitializeComponent();
+
+            // 背景透明
+            this.TransparencyKey = this.BackColor;
+
             this.manyButtons = null;
         }
 
