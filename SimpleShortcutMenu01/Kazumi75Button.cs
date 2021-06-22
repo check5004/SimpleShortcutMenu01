@@ -17,6 +17,7 @@ namespace SimpleShortcutMenu01 {
         // ボタンへのイベントをセットする
         public void eventMaking () {
             this.Click += new EventHandler ( doClickEvent );
+            this.MouseHover += new EventHandler(doMouseHover);
         }
 
         // ボタンへのイベントを解除する
@@ -25,8 +26,23 @@ namespace SimpleShortcutMenu01 {
         }
 
         // クリックイベントの実体(参照するリストボックスに文言テキストを追加)
+        /// <summary>
+        /// クリックイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void doClickEvent ( object sender, EventArgs e ) {
             this.targetLbox.Items.Add ( this.buttonMsg );
+        }
+
+        /// <summary>
+        /// マウスホバーイベント
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void doMouseHover(object sender, EventArgs e)
+        {
+            this.targetLbox.Items.Add(this.buttonMsg);
         }
     }
 }
