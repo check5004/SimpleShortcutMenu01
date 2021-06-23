@@ -7,36 +7,43 @@ using System.Windows.Forms;
 
 namespace SimpleShortcutMenu01 {
     /// <summary>
-    /// [MainMenu] ラベルプロパティ設定クラス
+    /// メインメニュー：テーブルレイアウト
     /// </summary>
-    public class MainMenuLabel : Label {
+    class MainMenuTableLayoutItem : TableLayoutPanel {
         /// <summary>
-        /// ラベル用イベントセット
+        /// メインメニューのテーブルレイアウトにイベントをセット
         /// </summary>
-        public void labelEventMaking () {
-            // クリックイベント追加
+        public void MenuItemTableLayoutEventMaking () {
             this.Click += new EventHandler ( doClickEvent );
-            // マウスホバーイベント追加
             this.MouseHover += new EventHandler ( doMouseHover );
+
+
         }
 
 
         /// <summary>
-        /// ラベルクリックイベント
+        /// テーブルレイアウト：クリックイベント
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void doClickEvent ( object sender, EventArgs e ) {
+        private void doClickEvent (object sender, EventArgs e) {
             return;
         }
 
         /// <summary>
-        /// マウスホバーイベント
+        /// テーブルレイアウト：マウスホバーイベント
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void doMouseHover ( object sender, EventArgs e ) {
+        private void doMouseHover(object sender, EventArgs e ) {
             return;
         }
+    }
+
+    /// <summary>
+    /// メインメニュー：テーブルレイアウト in ラベル
+    /// </summary>
+    class MainMenuTableLayoutInLabel : Label {
+
     }
 }

@@ -8,22 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SimpleShortcutMenu01
-{
-    public partial class Form1 : Form
-    {
+namespace SimpleShortcutMenu01 {
+    public partial class Form1 : Form {
         // フォーム呼び出しで作成するボタン(Windowsフォームのボタン - Buttonを継承する)
         private Kazumi75Button[] manyButtons;
+        private SecondMenuItem[] manySecoundMenuItemButton;
 
         // 配列の要素数(ここでは5個)
-        private const int ElementNum = 5;
+        private const int ElementNum = 10;
 
-        public Form1()
-        {
-            InitializeComponent();
+        public Form1 () {
+            InitializeComponent ();
 
             // 背景透明
-            this.TransparencyKey = this.BackColor;
+            //this.TransparencyKey = this.BackColor;\
 
             this.manyButtons = null;
         }
@@ -32,23 +30,18 @@ namespace SimpleShortcutMenu01
         int i = 0;
 
         // フォームを呼び出すボタン
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (5 <= i)
-            {
-                MessageBox.Show("フォームはすでに表示されています");
+        private void button1_Click ( object sender, EventArgs e ) {
+            if ( ElementNum <= i ) {
+                MessageBox.Show ( "追加上限です" );
                 return;
             }
 
             // ボタンの各メッセージはここであらかじめ設定する
             string[] msgs = new string[ElementNum];
-            msgs[0] = "浦賀";
-            msgs[1] = "鎌倉";
-            msgs[2] = "三崎";
-            msgs[3] = "観音崎";
-            msgs[4] = "横須賀中央";
+            msgs[i] = $"Item{i + 1}";
 
-
+            #region ButtonVersion
+            /*
             // ボタンの作成(Windowsフォームのボタンを継承する)
             this.manyButtons = new Kazumi75Button[ElementNum];
 
@@ -56,11 +49,11 @@ namespace SimpleShortcutMenu01
 
 
             // インスタンス作成
-            this.manyButtons[i] = new Kazumi75Button();
+            this.manyButtons[i] = new Kazumi75Button ();
 
             // 名前とテキストのプロパティを設定
             this.manyButtons[i].Name = "OriginalButton" + i;
-            this.manyButtons[i].Text = "ボタン" + i;
+            this.manyButtons[i].Text = "ボタン" + ( i + 1 );
 
             // ボタンクリック時に参照するリストボックスを指定
             this.manyButtons[i].targetLbox = listBox1;
@@ -69,16 +62,54 @@ namespace SimpleShortcutMenu01
             this.manyButtons[i].buttonMsg = msgs[i];
 
             // サイズと配置
-            this.manyButtons[i].Size = new Size(100, 20);
-            this.manyButtons[i].Location = new Point(10, 10 + i * 22);
+            this.manyButtons[i].Size = new Size ( 120, 50 );
+            this.manyButtons[i].Location = new Point ( 10, 10 + i * 52 );
 
             // フォームへの追加
-            this.Controls.Add(this.manyButtons[i]);
+            this.Controls.Add ( this.manyButtons[i] );
 
             // クリック時のボタンごとのイベント動作を作成する
-            this.manyButtons[i].eventMaking();
+            this.manyButtons[i].eventMaking ();
+            //}
+            */
+            #endregion
 
-            i++;  // /////////////////////////////////////////
+            #region original
+            // test
+            this.manySecoundMenuItemButton = new SecondMenuItem[ElementNum];
+            // インスタンス作成
+            this.manySecoundMenuItemButton[i] = new SecondMenuItem ();
+
+            // 名前とテキストのプロパティを設定
+            this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
+            this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
+            this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
+
+            // ボタンクリック時に参照するリストボックスを指定
+            this.manySecoundMenuItemButton[i].targetLbox = listBox1;
+
+            // メッセージを設定
+            this.manySecoundMenuItemButton[i].buttonMsg = msgs[i];
+
+            // サイズと配置
+            //this.manySecoundMenuItemButton[i].Size = new Size ( 120, 50 );
+            this.manySecoundMenuItemButton[i].Location = new Point ( 10, 10 + i * 47 );
+
+            // フォームへの追加
+            this.Controls.Add ( this.manySecoundMenuItemButton[i] );
+
+            // クリック時のボタンごとのイベント動作を作成する
+            //this.manySecoundMenuItemButton[i]eventMaking ();
+
+
+            #endregion
+
+
+            i++;  //---------------------------------
+        }
+
+        private void tableLayoutPanel1_Paint ( object sender, PaintEventArgs e ) {
+
         }
     }
 }

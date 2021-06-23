@@ -30,9 +30,9 @@ namespace SimpleShortcutMenu01 {
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 44);
+            this.button1.Location = new System.Drawing.Point(274, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(262, 99);
+            this.button1.Size = new System.Drawing.Size(174, 70);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -42,20 +42,23 @@ namespace SimpleShortcutMenu01 {
             // 
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 12;
-            this.listBox1.Location = new System.Drawing.Point(201, 183);
+            this.listBox1.Location = new System.Drawing.Point(274, 95);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(234, 268);
+            this.listBox1.Size = new System.Drawing.Size(174, 364);
             this.listBox1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(460, 504);
+            this.BackColor = System.Drawing.Color.Magenta;
+            this.ClientSize = new System.Drawing.Size(466, 474);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            this.Opacity = 0.8D;
             this.Text = "Form1";
+            this.TransparencyKey = System.Drawing.Color.Magenta;
             this.ResumeLayout(false);
 
         }

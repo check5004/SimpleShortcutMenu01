@@ -38,6 +38,7 @@
             this.ClientSize = new System.Drawing.Size(351, 396);
             this.Name = "FormMainMenu";
             this.Text = "FormMainMenu";
+            this.Load += new System.EventHandler(this.FormMainMenu_Load);
             this.ResumeLayout(false);
 
         }
