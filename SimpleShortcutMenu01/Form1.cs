@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace SimpleShortcutMenu01 {
     public partial class Form1 : Form {
         // フォーム呼び出しで作成するボタン(Windowsフォームのボタン - Buttonを継承する)
-        private Kazumi75Button[] manyButtons;
+        //private Kazumi75Button[] manyButtons;
         private SecondMenuItem[] manySecoundMenuItemButton;
 
         // 配列の要素数(ここでは5個)
@@ -20,10 +20,14 @@ namespace SimpleShortcutMenu01 {
         public Form1 () {
             InitializeComponent ();
 
-            // 背景透明
-            //this.TransparencyKey = this.BackColor;\
+            // show
+            FormMainMenu formMainMenu = new FormMainMenu ();
+            formMainMenu.Show ();
 
-            this.manyButtons = null;
+            // 背景透明
+            //this.TransparencyKey = this.BackColor;
+
+            this.manySecoundMenuItemButton = null;
         }
 
 
@@ -79,37 +83,26 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton = new SecondMenuItem[ElementNum];
             // インスタンス作成
             this.manySecoundMenuItemButton[i] = new SecondMenuItem ();
-
             // 名前とテキストのプロパティを設定
             this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
             this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
             this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
-
             // ボタンクリック時に参照するリストボックスを指定
             this.manySecoundMenuItemButton[i].targetLbox = listBox1;
-
             // メッセージを設定
             this.manySecoundMenuItemButton[i].buttonMsg = msgs[i];
-
             // サイズと配置
             //this.manySecoundMenuItemButton[i].Size = new Size ( 120, 50 );
             this.manySecoundMenuItemButton[i].Location = new Point ( 10, 10 + i * 47 );
-
             // フォームへの追加
             this.Controls.Add ( this.manySecoundMenuItemButton[i] );
 
             // クリック時のボタンごとのイベント動作を作成する
             //this.manySecoundMenuItemButton[i]eventMaking ();
 
-
             #endregion
 
-
-            i++;  //---------------------------------
-        }
-
-        private void tableLayoutPanel1_Paint ( object sender, PaintEventArgs e ) {
-
+            i++;
         }
     }
 }

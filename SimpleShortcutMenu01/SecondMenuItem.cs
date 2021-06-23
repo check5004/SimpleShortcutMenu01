@@ -38,7 +38,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void secondMenuItemClick ( object sender, EventArgs e ) {
             // クリック時
-            this.targetLbox.Items.Add ( this.buttonMsg );
+            this.targetLbox.Items.Add ( this.buttonMsg + ":Click!" );
             this.BackColor = Color.Yellow;
         }
 

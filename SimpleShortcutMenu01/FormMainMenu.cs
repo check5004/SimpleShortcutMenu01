@@ -15,7 +15,8 @@ namespace SimpleShortcutMenu01 {
         }
 
         private void FormMainMenu_Load ( object sender, EventArgs e ) {
-
+            // 背景透明
+            this.TransparencyKey = this.BackColor;
         }
     }
 }
