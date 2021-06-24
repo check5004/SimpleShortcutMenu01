@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable_MenuItem" msprop:Generator_TableClassName="DataTable_MenuItemDataTable" msprop:Generator_TableVarName="tableDataTable_MenuItem" msprop:Generator_TablePropName="DataTable_MenuItem" msprop:Generator_RowDeletingName="DataTable_MenuItemRowDeleting" msprop:Generator_RowChangingName="DataTable_MenuItemRowChanging" msprop:Generator_RowEvHandlerName="DataTable_MenuItemRowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable_MenuItemRowDeleted" msprop:Generator_UserTableName="DataTable_MenuItem" msprop:Generator_RowChangedName="DataTable_MenuItemRowChanged" msprop:Generator_RowEvArgName="DataTable_MenuItemRowChangeEvent" msprop:Generator_RowClassName="DataTable_MenuItemRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="menuType" msprop:Generator_ColumnVarNameInTable="columnmenuType" msprop:Generator_ColumnPropNameInRow="menuType" msprop:Generator_ColumnPropNameInTable="menuTypeColumn" msprop:Generator_UserColumnName="menuType" type="xs:string" minOccurs="0" />
+              <xs:element name="menuTitle" msprop:Generator_ColumnVarNameInTable="columnmenuTitle" msprop:Generator_ColumnPropNameInRow="menuTitle" msprop:Generator_ColumnPropNameInTable="menuTitleColumn" msprop:Generator_UserColumnName="menuTitle" type="xs:string" minOccurs="0" />
+              <xs:element name="url" msprop:Generator_ColumnVarNameInTable="columnurl" msprop:Generator_ColumnPropNameInRow="url" msprop:Generator_ColumnPropNameInTable="urlColumn" msprop:Generator_UserColumnName="url" type="xs:string" minOccurs="0" />
+              <xs:element name="x" msprop:Generator_ColumnVarNameInTable="columnx" msprop:Generator_ColumnPropNameInRow="x" msprop:Generator_ColumnPropNameInTable="xColumn" msprop:Generator_UserColumnName="x" type="xs:int" minOccurs="0" />
+              <xs:element name="y" msprop:Generator_ColumnVarNameInTable="columny" msprop:Generator_ColumnPropNameInRow="y" msprop:Generator_ColumnPropNameInTable="yColumn" msprop:Generator_UserColumnName="y" type="xs:int" minOccurs="0" />
+              <xs:element name="x_end" msprop:Generator_ColumnVarNameInTable="columnx_end" msprop:Generator_ColumnPropNameInRow="x_end" msprop:Generator_ColumnPropNameInTable="x_endColumn" msprop:Generator_UserColumnName="x_end" type="xs:int" minOccurs="0" />
+              <xs:element name="y_end" msprop:Generator_ColumnVarNameInTable="columny_end" msprop:Generator_ColumnPropNameInRow="y_end" msprop:Generator_ColumnPropNameInTable="y_endColumn" msprop:Generator_UserColumnName="y_end" type="xs:int" minOccurs="0" />
+              <xs:element name="comment" msprop:Generator_ColumnVarNameInTable="columncomment" msprop:Generator_ColumnPropNameInRow="comment" msprop:Generator_ColumnPropNameInTable="commentColumn" msprop:Generator_UserColumnName="comment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

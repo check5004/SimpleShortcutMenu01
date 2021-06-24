@@ -17,12 +17,24 @@ namespace SimpleShortcutMenu01 {
         // 配列の要素数(ここでは5個)
         private const int ElementNum = 10;
 
+        public static List<MainMenuItem> mainMenuItem = new List<MainMenuItem> ();
+
         public Form1 () {
             InitializeComponent ();
 
+            // test
+            Config.changing = false;
+            Config.kidou = false;
+
             // show
-            FormMainMenu formMainMenu = new FormMainMenu ();
-            formMainMenu.Show ();
+            Config.mainMenuItemCount = 5;
+            for ( int i = 0; i < Config.mainMenuItemCount; i++ ) {
+                mainMenuItem.Add ( new MainMenuItem () );
+                mainMenuItem[i].StartPosition = FormStartPosition.Manual;
+                mainMenuItem[i].Show ();
+            }
+                mainMenuItem[0].Left = 100;
+                mainMenuItem[0].Top = 100 * ( i + 1 );
 
             // 背景透明
             //this.TransparencyKey = this.BackColor;

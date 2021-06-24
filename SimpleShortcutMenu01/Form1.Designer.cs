@@ -51,14 +51,14 @@ namespace SimpleShortcutMenu01 {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Magenta;
+            this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(466, 474);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Opacity = 0.8D;
             this.Text = "Form1";
-            this.TransparencyKey = System.Drawing.Color.Magenta;
+            this.TransparencyKey = System.Drawing.Color.Lime;
             this.ResumeLayout(false);
 
         }

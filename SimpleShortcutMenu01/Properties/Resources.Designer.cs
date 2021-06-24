@@ -59,5 +59,15 @@ namespace SimpleShortcutMenu01.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap テスト修正版01 {
+            get {
+                object obj = ResourceManager.GetObject("テスト修正版01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

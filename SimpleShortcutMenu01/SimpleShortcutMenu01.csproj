@@ -85,23 +85,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMainMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMainMenu.Designer.cs">
-      <DependentUpon>FormMainMenu.cs</DependentUpon>
-    </Compile>
     <Compile Include="Kazumi75Button.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Layered.cs" />
     <Compile Include="MainMenuItem.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenuItem.Designer.cs">
       <DependentUpon>MainMenuItem.cs</DependentUpon>
@@ -116,9 +122,6 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMainMenu.resx">
-      <DependentUpon>FormMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenuItem.resx">
       <DependentUpon>MainMenuItem.cs</DependentUpon>
@@ -136,6 +139,17 @@
     <EmbeddedResource Include="SecondMenuItem.resx">
       <DependentUpon>SecondMenuItem.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -165,6 +179,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IconImage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\テスト修正版01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
