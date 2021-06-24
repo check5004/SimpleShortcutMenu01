@@ -24,7 +24,6 @@ namespace SimpleShortcutMenu01 {
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent () {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SecondMenuItem));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -32,10 +31,11 @@ namespace SimpleShortcutMenu01 {
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 47);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -51,7 +51,7 @@ namespace SimpleShortcutMenu01 {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(45, 7);
+            this.label1.Location = new System.Drawing.Point(50, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 32);
             this.label1.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace SimpleShortcutMenu01 {
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Name = "SecondMenuItem";
-            this.Size = new System.Drawing.Size(220, 45);
+            this.Size = new System.Drawing.Size(250, 55);
             this.Load += new System.EventHandler(this.SecondMenuItem_Load);
             this.Click += new System.EventHandler(this.secondMenuItemClick);
             this.MouseEnter += new System.EventHandler(this.SecoundMenuItemMouseEnter);

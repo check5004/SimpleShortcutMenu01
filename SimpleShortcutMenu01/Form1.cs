@@ -22,8 +22,8 @@ namespace SimpleShortcutMenu01 {
         public Form1 () {
             InitializeComponent ();
 
-            // test
             Config.changing = false;
+            // test
             Config.kidou = false;
 
             // show
@@ -31,17 +31,21 @@ namespace SimpleShortcutMenu01 {
             for ( int i = 0; i < Config.mainMenuItemCount; i++ ) {
                 mainMenuItem.Add ( new MainMenuItem () );
                 mainMenuItem[i].StartPosition = FormStartPosition.Manual;
-                mainMenuItem[i].Show ();
+                //mainMenuItem[i].Show ();
             }
-                mainMenuItem[0].Left = 100;
-                mainMenuItem[0].Top = 100 * ( i + 1 );
 
-            // 背景透明
-            //this.TransparencyKey = this.BackColor;
+            // 表示位置指定
+            // ------------------ ウインドウを閉じた位置にする --------------------
+            mainMenuItem[0].Left = 100;
+            mainMenuItem[0].Top = 100;
+
+            // 移動してから表示（カクつかない）
+            foreach ( var item in mainMenuItem ) {
+                item.Show ();
+            }
 
             this.manySecoundMenuItemButton = null;
         }
-
 
         int i = 0;
 
@@ -99,6 +103,7 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
             this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
             this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
+            this.manySecoundMenuItemButton[i].imagePath = @"";
             // ボタンクリック時に参照するリストボックスを指定
             this.manySecoundMenuItemButton[i].targetLbox = listBox1;
             // メッセージを設定
@@ -108,10 +113,6 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton[i].Location = new Point ( 10, 10 + i * 47 );
             // フォームへの追加
             this.Controls.Add ( this.manySecoundMenuItemButton[i] );
-
-            // クリック時のボタンごとのイベント動作を作成する
-            //this.manySecoundMenuItemButton[i]eventMaking ();
-
             #endregion
 
             i++;

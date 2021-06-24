@@ -38,7 +38,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void secondMenuItemClick ( object sender, EventArgs e ) {
             // クリック時
-            this.targetLbox.Items.Add ( this.buttonMsg + ":Click!" );
+            //this.targetLbox.Items.Add ( this.buttonMsg + ":Click!" );
             this.BackColor = Color.Yellow;
         }
 
@@ -65,6 +65,8 @@ namespace SimpleShortcutMenu01 {
 
         private void SecondMenuItem_Load ( object sender, EventArgs e ) {
             this.label1.Text = labelText;
+            // 画像パス設定
+            this.pictureBox1.ImageLocation = imagePath == "" || imagePath == null ?  @"C:\Users\check\Source\Repos\check5004\SimpleShortcutMenu01\SimpleShortcutMenu01\Resources\HomeIcon.png" : imagePath;
             this.BackColor = Color.FromArgb ( 200, 200, 200 );
         }
 
@@ -74,7 +76,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SecoundMenuItemMouseEnter ( object sender, EventArgs e ) {
-            this.targetLbox.Items.Add ( this.buttonMsg );
+            //this.targetLbox.Items.Add ( this.buttonMsg );
             this.BackColor = Color.FromArgb ( 180, 180, 0 );
         }
     }
