@@ -11,17 +11,47 @@ using System.Windows.Forms;
 namespace SimpleShortcutMenu01 {
     public partial class MainMenuItem : Form {
         SecondMenuForm secondMenuForm = null;
+        private string mainMenuItemName;
+        private Bitmap imageGray = Properties.Resources.InternetGray;
+        private Bitmap imageYellow = Properties.Resources.InternetYellow;
+        private Bitmap imageDarkYellow = Properties.Resources.InternetDarkYellow;
 
-        public MainMenuItem () {
+        public MainMenuItem ( string mainMenuItemName ) {
             InitializeComponent ();
+            this.mainMenuItemName = mainMenuItemName;
         }
 
         private void MainMenuItem_Load ( object sender, EventArgs e ) {
+            imageGray = Properties.Resources.InternetGray;  // default
+            switch ( this.mainMenuItemName ) {
+                case "Web":
+                    imageGray = Properties.Resources.InternetGray;
+                    imageYellow = Properties.Resources.InternetYellow;
+                    imageDarkYellow = Properties.Resources.InternetDarkYellow;
+                    break;
+                case "App":
+                    imageGray = Properties.Resources.AppGray;
+                    imageYellow = Properties.Resources.AppYellow;
+                    imageDarkYellow = Properties.Resources.AppDarkYellow;
+                    break;
+                case "Folder":
+                    imageGray = Properties.Resources.FolderGray;
+                    imageYellow = Properties.Resources.FolderYellow;
+                    imageDarkYellow = Properties.Resources.FolderDarkYellow;
+                    break;
+                case "File":
+                    imageGray = Properties.Resources.FileGray;
+                    imageYellow = Properties.Resources.FileYelow;
+                    imageDarkYellow = Properties.Resources.FileDarkYellow;
+                    break;
+                case "Setting":
+                    imageGray = Properties.Resources.SettingGray;
+                    imageYellow = Properties.Resources.SettingYellow;
+                    imageDarkYellow = Properties.Resources.SettingDarkYellow;
+                    break;
+            }
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.InternetGray, 220 );
-
-            // 初期化
-            Config.mouseHover = false;
+            Layered.UpdateLayer ( this, imageGray, 220 );
         }
 
 
@@ -97,7 +127,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_Click ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.InternetYellow, 220 );
+            Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
             SecondMenuItemView ( sender );
         }
@@ -109,9 +139,13 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_MouseEnter ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.InternetDarkYellow, 220 );
+            Layered.UpdateLayer ( this, imageDarkYellow, 220 );
 
-            Config.mouseHover = true;  // ???
+            // アプリ全体をアクティブにする
+            // どのイベントでやるか要検討
+            foreach ( var item in Form1.mainMenuItem ) {
+                item.Activate ();
+            }
         }
 
         /// <summary>
@@ -121,9 +155,13 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_MouseLeave ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.InternetGray, 220 );
+            Layered.UpdateLayer ( this, imageGray, 220 );
 
-            Config.mouseHover = false;  // ???
+            // セカンドフォームが表示されていたら閉じる
+            //if ( Config.secondMenuForm != null ) {
+            //    Config.secondMenuForm.Close ();
+            //    Config.secondMenuForm = null;
+            //}
         }
 
         /// <summary>
@@ -133,7 +171,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_MouseHover ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.InternetYellow, 220 );
+            Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
             SecondMenuItemView ( sender );
         }
@@ -158,11 +196,11 @@ namespace SimpleShortcutMenu01 {
             }
 
             // セカンドメニューフォームを表示する
-            secondMenuForm = new SecondMenuForm ();
+            secondMenuForm = new SecondMenuForm ( mainMenuItemName );
 
             // フォーム表示座標指定
             secondMenuForm.StartPosition = FormStartPosition.Manual;
-            secondMenuForm.Location = new Point ( Form1.mainMenuItem[itemNum].Location.X + Form1.mainMenuItem[itemNum].Width, (int)Form1.mainMenuItem[itemNum].Location.Y / 2);  // 要調整！！！！！！！！！！！！！！！！！！！！！
+            secondMenuForm.Location = new Point ( Form1.mainMenuItem[itemNum].Location.X + Form1.mainMenuItem[itemNum].Width, (int)Form1.mainMenuItem[itemNum].Location.Y + 5 );  // 要調整！！！！！！！！！！！！！！！！！！！！！
 
             secondMenuForm.Show ();
         }

@@ -24,12 +24,25 @@ namespace SimpleShortcutMenu01 {
 
             Config.changing = false;
             // test
-            Config.kidou = false;
+
 
             // show
-            Config.mainMenuItemCount = 5;
+            DataSet_MenuItems dataSet_MenuItems = new DataSet_MenuItems ();
+            var mainMenuItems = DataLoad.GetXMLDate ( dataSet_MenuItems );
+            Config.dataSet_MenuItems = mainMenuItems.Tables[0];
+
+            // メニュー項目名を取得
+            var co = new HashSet<string>();
+            for ( int i = 0; i < Config.dataSet_MenuItems.Rows.Count; i++ ) {
+                co.Add ( Config.dataSet_MenuItems.Rows[i]["menuName"].ToString() );
+            }
+            var coClear = co.ToList ();
+
+            Config.mainMenuItemCount = coClear.Count;
+
             for ( int i = 0; i < Config.mainMenuItemCount; i++ ) {
-                mainMenuItem.Add ( new MainMenuItem () );
+                mainMenuItem.Add ( new MainMenuItem ( coClear[i] ) );
+
                 mainMenuItem[i].StartPosition = FormStartPosition.Manual;
                 //mainMenuItem[i].Show ();
             }
@@ -105,7 +118,6 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
             this.manySecoundMenuItemButton[i].imagePath = @"";
             // ボタンクリック時に参照するリストボックスを指定
-            this.manySecoundMenuItemButton[i].targetLbox = listBox1;
             // メッセージを設定
             this.manySecoundMenuItemButton[i].buttonMsg = msgs[i];
             // サイズと配置
@@ -116,6 +128,33 @@ namespace SimpleShortcutMenu01 {
             #endregion
 
             i++;
+        }
+
+
+        private DataSet_MenuItems dataSet_MenuItems2 = new DataSet_MenuItems ();
+
+        private void button_DataSetSave_Click ( object sender, EventArgs e ) {
+            DataLoad.OutputXML ( dataSet_MenuItems2.DataTable_MenuItems.DataSet );
+        }
+
+        private void button_DataSetLoad_Click ( object sender, EventArgs e ) {
+            if ( dataGridView1.RowCount > 1 ) {
+                //for ( int i = 0; i < dataGridView1.RowCount; i++ ) {
+                //    dataGridView1.Rows.Remove(dataGridView1.Rows[i]);
+                //}
+                MessageBox.Show ( "既に読み込まれています。" );
+                return;
+            }
+            DataLoad.GetXMLDate ( dataSet_MenuItems2.DataTable_MenuItems.DataSet );
+            dataGridView1.DataSource = dataSet_MenuItems2.DataTable_MenuItems.DataSet;
+        }
+
+        private void button2_Click ( object sender, EventArgs e ) {
+            dataGridView1.Rows.Add ( 1 );
+        }
+
+        private void button3_Click ( object sender, EventArgs e ) {
+            dataGridView1.Rows.RemoveAt ( dataGridView1.SelectedCells[0].RowIndex );
         }
     }
 }

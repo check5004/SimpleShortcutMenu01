@@ -13,15 +13,25 @@ namespace SimpleShortcutMenu01 {
 
         private SecondMenuItem[] manySecoundMenuItemButton;
         // 選択項目数
-        private int elementNum = 10;
+        private int elementNum = 0;
+        /// <summary>
+        /// メインメニューで選択された項目名
+        /// </summary>
+        private string selectMainMenuItemName;
+        private List<DataRow> secondMenuItemData = new List<DataRow>();
 
         /// <summary>
         /// セカンドメニューフォーム
         /// </summary>
-        /// <param name="itemNum">選択項目の配列番号</param>
-        public SecondMenuForm () {
+        /// <param name="selectMainMenuItemName">メインメニューで選択された項目名</param>
+        public SecondMenuForm ( string selectMainMenuItemName ) {
             InitializeComponent ();
             this.Visible = false;
+            this.selectMainMenuItemName = selectMainMenuItemName;
+
+            // セカンド項目取得
+            secondMenuItemData = Config.dataSet_MenuItems.AsEnumerable ().Where ( r => r.Field<string> ( "menuName" ) == selectMainMenuItemName ).ToList ();
+
         }
 
         private void SecondMenuForm_Load ( object sender, EventArgs e ) {
@@ -31,6 +41,8 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton = null;
 
             // ----- アイテム表示 -----
+            // count
+            elementNum = secondMenuItemData.Count;
 
             // アイテムを設定
             string[] title = new string[elementNum];
@@ -42,14 +54,14 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton = new SecondMenuItem[elementNum];
 
             for ( int i = 0; i < elementNum; i++ ) {
-                title[i] = $"Item{i + 1}";
+                title[i] = secondMenuItemData[i]["title"].ToString();
 
                 // インスタンス作成
                 this.manySecoundMenuItemButton[i] = new SecondMenuItem ();
                 // 名前とテキストのプロパティを設定
                 this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
                 this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
-                this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
+                this.manySecoundMenuItemButton[i].labelText =title[i];
                 this.manySecoundMenuItemButton[i].imagePath = @"";
                 // メッセージを設定
                 this.manySecoundMenuItemButton[i].buttonMsg = title[i];

@@ -1,0 +1,62 @@
+﻿<DataSet_MenuItems xmlns="http://tempuri.org/DataSet_MenuItems.xsd">
+  <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Google</scondMenuName>
+    <title>Google</title>
+    <url>https://google.com</url>
+    <comment>googleページ</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Yahoo</scondMenuName>
+    <title>Yahoo</title>
+    <url>https://yahoo.co.jp</url>
+    <comment>Yahooページ</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>電卓</scondMenuName>
+    <title>電卓</title>
+    <url>filepath</url>
+    <comment>電卓アプリ</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>CopyAssist</scondMenuName>
+    <title>CopyAssist</title>
+    <url>filepath</url>
+    <comment>あらかじめ設定しておいたテキストをクリックだけでクリップボードにコピーしてくれるアプリ</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>Word</scondMenuName>
+    <title>Word</title>
+    <url>filepath</url>
+    <comment>Microsoft Office</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>Excel</scondMenuName>
+    <title>Excel</title>
+    <url>filepath</url>
+    <comment>Microsoft Office</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>Power Point</scondMenuName>
+    <title>Power Point</title>
+    <url>filepath</url>
+    <comment>Microsoft Office</comment>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Folder</menuName>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>File</menuName>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Setting</menuName>
+    <scondMenuName>設定項目</scondMenuName>
+    <title>設定項目</title>
+  </DataTable_MenuItems>
+</DataSet_MenuItems>
