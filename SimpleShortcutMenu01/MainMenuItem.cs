@@ -18,7 +18,7 @@ namespace SimpleShortcutMenu01 {
 
         private void MainMenuItem_Load ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.テスト修正版01, 220 );
+            Layered.UpdateLayer ( this, Properties.Resources.InternetGray, 220 );
 
             // 初期化
             Config.mouseHover = false;
@@ -48,12 +48,12 @@ namespace SimpleShortcutMenu01 {
             int count1 = 1;
             int count2 = 1;
             for ( int i = formi - 1; i >= 0; i-- ) {
-                Form1.mainMenuItem[i].Location = new Point ( this.Left, this.Top - ( count1 * 100 ) );
+                Form1.mainMenuItem[i].Location = new Point ( this.Left, this.Top - ( count1 * 75 ) );
                 count1++;
             }
 
             for ( int i = formi + 1; i < Form1.mainMenuItem.Count; i++ ) {
-                Form1.mainMenuItem[i].Location = new Point ( this.Left, this.Top + ( count2 * 100 ) );
+                Form1.mainMenuItem[i].Location = new Point ( this.Left, this.Top + ( count2 * 75 ) );
                 count2++;
             }
 
@@ -75,6 +75,12 @@ namespace SimpleShortcutMenu01 {
             if ( ( e.Button & MouseButtons.Left ) == MouseButtons.Left ) {
                 this.Left += e.X - Config.mousePoint.X;
                 this.Top += e.Y - Config.mousePoint.Y;
+
+                // セカンドフォームが表示されていたら閉じる
+                if ( Config.secondMenuForm != null ) {
+                    Config.secondMenuForm.Close ();
+                    Config.secondMenuForm = null;
+                }
             }
         }
 
@@ -91,7 +97,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_Click ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.HomeIconYellow, 220 );
+            Layered.UpdateLayer ( this, Properties.Resources.InternetYellow, 220 );
             // セカンドメニュー表示
             SecondMenuItemView ( sender );
         }
@@ -103,7 +109,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_MouseEnter ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.HomeIconDarkYellow, 220 );
+            Layered.UpdateLayer ( this, Properties.Resources.InternetDarkYellow, 220 );
 
             Config.mouseHover = true;  // ???
         }
@@ -115,7 +121,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_MouseLeave ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.HomeIcon, 220 );
+            Layered.UpdateLayer ( this, Properties.Resources.InternetGray, 220 );
 
             Config.mouseHover = false;  // ???
         }
@@ -127,7 +133,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void MainMenuItem_MouseHover ( object sender, EventArgs e ) {
             // 透過画像表示
-            Layered.UpdateLayer ( this, Properties.Resources.HomeIconYellow, 220 );
+            Layered.UpdateLayer ( this, Properties.Resources.InternetYellow, 220 );
             // セカンドメニュー表示
             SecondMenuItemView ( sender );
         }
@@ -156,7 +162,7 @@ namespace SimpleShortcutMenu01 {
 
             // フォーム表示座標指定
             secondMenuForm.StartPosition = FormStartPosition.Manual;
-            secondMenuForm.Location = new Point ( Form1.mainMenuItem[itemNum].Location.X + Form1.mainMenuItem[itemNum].Width, Form1.mainMenuItem[itemNum].Location.Y );
+            secondMenuForm.Location = new Point ( Form1.mainMenuItem[itemNum].Location.X + Form1.mainMenuItem[itemNum].Width, (int)Form1.mainMenuItem[itemNum].Location.Y / 2);  // 要調整！！！！！！！！！！！！！！！！！！！！！
 
             secondMenuForm.Show ();
         }

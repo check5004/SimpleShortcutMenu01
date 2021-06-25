@@ -66,7 +66,7 @@ namespace SimpleShortcutMenu01 {
         private void SecondMenuItem_Load ( object sender, EventArgs e ) {
             this.label1.Text = labelText;
             // 画像パス設定
-            this.pictureBox1.ImageLocation = imagePath == "" || imagePath == null ?  @"C:\Users\check\Source\Repos\check5004\SimpleShortcutMenu01\SimpleShortcutMenu01\Resources\HomeIcon.png" : imagePath;
+            this.pictureBox1.ImageLocation = imagePath == "" || imagePath == null ? @"C:\Users\CRCL082\source\repos\SimpleShortcutMenu01\SimpleShortcutMenu01\Resources\AppGray.png" : imagePath;
             this.BackColor = Color.FromArgb ( 200, 200, 200 );
         }
 

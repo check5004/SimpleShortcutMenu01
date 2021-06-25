@@ -63,9 +63,9 @@ namespace SimpleShortcutMenu01.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap HomeIcon {
+        internal static System.Drawing.Bitmap AppDarkYellow {
             get {
-                object obj = ResourceManager.GetObject("HomeIcon", resourceCulture);
+                object obj = ResourceManager.GetObject("AppDarkYellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace SimpleShortcutMenu01.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap HomeIconDarkYellow {
+        internal static System.Drawing.Bitmap AppGray {
             get {
-                object obj = ResourceManager.GetObject("HomeIconDarkYellow", resourceCulture);
+                object obj = ResourceManager.GetObject("AppGray", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace SimpleShortcutMenu01.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap HomeIconYellow {
+        internal static System.Drawing.Bitmap AppYellow {
             get {
-                object obj = ResourceManager.GetObject("HomeIconYellow", resourceCulture);
+                object obj = ResourceManager.GetObject("AppYellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,179 @@ namespace SimpleShortcutMenu01.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
-        internal static System.Drawing.Bitmap テスト修正版01 {
+        internal static System.Drawing.Bitmap CalcDarkYellow {
             get {
-                object obj = ResourceManager.GetObject("テスト修正版01", resourceCulture);
+                object obj = ResourceManager.GetObject("CalcDarkYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap CalcGray {
+            get {
+                object obj = ResourceManager.GetObject("CalcGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap CalcYellow {
+            get {
+                object obj = ResourceManager.GetObject("CalcYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap CopyDarkYellow {
+            get {
+                object obj = ResourceManager.GetObject("CopyDarkYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap CopyGray {
+            get {
+                object obj = ResourceManager.GetObject("CopyGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap CopyYellow {
+            get {
+                object obj = ResourceManager.GetObject("CopyYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap FileDarkYellow {
+            get {
+                object obj = ResourceManager.GetObject("FileDarkYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap FileGray {
+            get {
+                object obj = ResourceManager.GetObject("FileGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap FileYelow {
+            get {
+                object obj = ResourceManager.GetObject("FileYelow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap FolderDarkYellow {
+            get {
+                object obj = ResourceManager.GetObject("FolderDarkYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap FolderGray {
+            get {
+                object obj = ResourceManager.GetObject("FolderGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap FolderYellow {
+            get {
+                object obj = ResourceManager.GetObject("FolderYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap InternetDarkYellow {
+            get {
+                object obj = ResourceManager.GetObject("InternetDarkYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap InternetGray {
+            get {
+                object obj = ResourceManager.GetObject("InternetGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap InternetYellow {
+            get {
+                object obj = ResourceManager.GetObject("InternetYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingDarkYellow {
+            get {
+                object obj = ResourceManager.GetObject("SettingDarkYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingGray {
+            get {
+                object obj = ResourceManager.GetObject("SettingGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap SettingYellow {
+            get {
+                object obj = ResourceManager.GetObject("SettingYellow", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

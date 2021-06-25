@@ -50,7 +50,7 @@ namespace SimpleShortcutMenu01 {
                 this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
                 this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
                 this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
-                this.manySecoundMenuItemButton[i].imagePath = @"C:\Users\check\Source\Repos\check5004\SimpleShortcutMenu01\SimpleShortcutMenu01\Resources\テスト修正版01.png";
+                this.manySecoundMenuItemButton[i].imagePath = @"";
                 // メッセージを設定
                 this.manySecoundMenuItemButton[i].buttonMsg = title[i];
                 // サイズと配置

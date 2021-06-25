@@ -118,16 +118,67 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="HomeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HomeIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AppDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HomeIconDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HomeIconDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AppGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HomeIconYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HomeIconYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AppYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AppYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="テスト修正版01" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\テスト修正版01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CalcDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalcDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalcGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalcGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CalcYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CalcYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CopyDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CopyGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CopyYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CopyYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FileDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FileDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FileGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FileGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FileYelow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FileYelow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FolderDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FolderDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FolderGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FolderGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FolderYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FolderYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InternetDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InternetGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\InternetYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SettingYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SettingYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

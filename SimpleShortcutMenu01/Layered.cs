@@ -22,7 +22,7 @@ namespace SimpleShortcutMenu01 {
             }
 
             // size setting
-            png = new Bitmap ( png, 90, 90 );
+            png = new Bitmap ( png, 70, 70 );
 
             // The ideia of this is very simple,
             // 1. Create a compatible DC with screen;
