@@ -68,9 +68,9 @@ namespace SimpleShortcutMenu01 {
             this.label1.Text = labelText;
             // 画像パス設定
             if ( imagePath == "" || imagePath == null ) {
-                this.pictureBox1.Image = iconBitmap;
+                this.pictureBox1.Image = iconBitmap == null ? Properties.Resources.NotFoundGray : iconBitmap;
             } else {
-                this.pictureBox1.ImageLocation = imagePath == "" || imagePath == null ? @"C:\Users\CRCL082\source\repos\SimpleShortcutMenu01\SimpleShortcutMenu01\Resources\AppGray.png" : imagePath;
+                this.pictureBox1.ImageLocation = imagePath;
             }
             this.BackColor = Color.FromArgb ( 200, 200, 200 );
         }
@@ -83,6 +83,12 @@ namespace SimpleShortcutMenu01 {
         private void SecoundMenuItemMouseEnter ( object sender, EventArgs e ) {
             //this.targetLbox.Items.Add ( this.buttonMsg );
             this.BackColor = Color.FromArgb ( 180, 180, 0 );
+        }
+
+        private void SecondMenuItem_MouseDown ( object sender, MouseEventArgs e ) {
+            if ( e.Button == MouseButtons.Left ) {
+                this.BackColor = Color.Yellow;
+            }
         }
     }
 }

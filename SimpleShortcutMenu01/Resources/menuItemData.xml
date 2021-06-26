@@ -32,6 +32,30 @@
     <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Amazon</scondMenuName>
+    <title>Amazon</title>
+    <url>https://amazon.com</url>
+    <comment>Amazon</comment>
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Qiita</scondMenuName>
+    <title>Qiita アイコン取れない</title>
+    <url>https://qiita.com</url>
+    <comment>アイコン取れない</comment>
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Qiita</scondMenuName>
+    <title>Qiita アイコン自分で指定</title>
+    <url>https://qiita.com</url>
+    <comment>アイコンを自分で指定</comment>
+    <imagePath>https://cdn.qiita.com/assets/favicons/public/production-c620d3e403342b1022967ba5e3db1aaa.ico</imagePath>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
     <menuName>App</menuName>
     <scondMenuName>Word</scondMenuName>
     <title>Word</title>
@@ -53,6 +77,22 @@
     <title>Power Point</title>
     <url>C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE</url>
     <comment>Microsoft Office</comment>
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>test</scondMenuName>
+    <title>ImagePath Null Check</title>
+    <url />
+    <comment />
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>App</menuName>
+    <scondMenuName>test</scondMenuName>
+    <title>日本語テｽと</title>
+    <url />
+    <comment />
     <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>

@@ -36,6 +36,7 @@
             this.ShowInTaskbar = false;
             this.Text = "SecondMenuForm";
             this.TransparencyKey = System.Drawing.Color.LawnGreen;
+            this.Deactivate += new System.EventHandler(this.SecondMenuForm_Deactivate);
             this.Load += new System.EventHandler(this.SecondMenuForm_Load);
             this.ResumeLayout(false);
 

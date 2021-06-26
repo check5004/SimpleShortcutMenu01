@@ -25,6 +25,9 @@ namespace SimpleShortcutMenu01 {
         /// </summary>
         private void InitializeComponent () {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataSetMenuItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet_MenuItems = new SimpleShortcutMenu01.DataSet_MenuItems();
@@ -41,11 +44,40 @@ namespace SimpleShortcutMenu01 {
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("ＤＨＰ平成ゴシックW5", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(990, 414);
+            this.dataGridView1.Size = new System.Drawing.Size(984, 450);
             this.dataGridView1.TabIndex = 2;
             // 
             // dataSetMenuItemsBindingSource
@@ -60,7 +92,8 @@ namespace SimpleShortcutMenu01 {
             // 
             // button_DataSetSave
             // 
-            this.button_DataSetSave.Location = new System.Drawing.Point(927, 432);
+            this.button_DataSetSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_DataSetSave.Location = new System.Drawing.Point(921, 468);
             this.button_DataSetSave.Name = "button_DataSetSave";
             this.button_DataSetSave.Size = new System.Drawing.Size(75, 23);
             this.button_DataSetSave.TabIndex = 3;
@@ -70,7 +103,8 @@ namespace SimpleShortcutMenu01 {
             // 
             // button_DataSetLoad
             // 
-            this.button_DataSetLoad.Location = new System.Drawing.Point(12, 432);
+            this.button_DataSetLoad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_DataSetLoad.Location = new System.Drawing.Point(12, 468);
             this.button_DataSetLoad.Name = "button_DataSetLoad";
             this.button_DataSetLoad.Size = new System.Drawing.Size(75, 23);
             this.button_DataSetLoad.TabIndex = 4;
@@ -80,7 +114,8 @@ namespace SimpleShortcutMenu01 {
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(694, 432);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button3.Location = new System.Drawing.Point(657, 468);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(207, 23);
             this.button3.TabIndex = 6;
@@ -90,7 +125,8 @@ namespace SimpleShortcutMenu01 {
             // 
             // button_insert
             // 
-            this.button_insert.Location = new System.Drawing.Point(117, 432);
+            this.button_insert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_insert.Location = new System.Drawing.Point(159, 468);
             this.button_insert.Name = "button_insert";
             this.button_insert.Size = new System.Drawing.Size(203, 23);
             this.button_insert.TabIndex = 7;
@@ -100,7 +136,8 @@ namespace SimpleShortcutMenu01 {
             // 
             // button_itemUp
             // 
-            this.button_itemUp.Location = new System.Drawing.Point(412, 432);
+            this.button_itemUp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_itemUp.Location = new System.Drawing.Point(424, 468);
             this.button_itemUp.Name = "button_itemUp";
             this.button_itemUp.Size = new System.Drawing.Size(75, 23);
             this.button_itemUp.TabIndex = 8;
@@ -110,7 +147,8 @@ namespace SimpleShortcutMenu01 {
             // 
             // button_itemDown
             // 
-            this.button_itemDown.Location = new System.Drawing.Point(522, 432);
+            this.button_itemDown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_itemDown.Location = new System.Drawing.Point(505, 468);
             this.button_itemDown.Name = "button_itemDown";
             this.button_itemDown.Size = new System.Drawing.Size(75, 23);
             this.button_itemDown.TabIndex = 9;
@@ -123,7 +161,7 @@ namespace SimpleShortcutMenu01 {
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1014, 467);
+            this.ClientSize = new System.Drawing.Size(1008, 503);
             this.Controls.Add(this.button_itemDown);
             this.Controls.Add(this.button_itemUp);
             this.Controls.Add(this.button_insert);
@@ -133,6 +171,8 @@ namespace SimpleShortcutMenu01 {
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.Form1_Activated);
+            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetMenuItemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_MenuItems)).EndInit();

@@ -48,7 +48,7 @@ namespace SimpleShortcutMenu01 {
             }
 
             // DataGrid 表示
-            button_DataSetLoad_Click ( new object(), new EventArgs() );
+            button_DataSetLoad_Click ( new object (), new EventArgs () );
         }
 
         #region DataGridView操作
@@ -157,5 +157,23 @@ namespace SimpleShortcutMenu01 {
             } catch { return; }
         }
         #endregion
+
+        // Form1がアクティブになったらメインメニューアイテムもアクティブにする
+        private bool act = false;
+        private bool actWorkEnd = false;
+        private void Form1_Activated ( object sender, EventArgs e ) {
+            if ( act ) return;
+            act = true;
+            actWorkEnd = false;
+            foreach ( var item in mainMenuItem ) {
+                item.Activate ();
+            }
+            this.Activate ();
+            actWorkEnd = true;
+        }
+
+        private void Form1_Deactivate ( object sender, EventArgs e ) {
+            if ( actWorkEnd ) act = false;
+        }
     }
 }

@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -34,6 +37,7 @@ namespace SimpleShortcutMenu01 {
         }
 
         private void SecondMenuForm_Load ( object sender, EventArgs e ) {
+            // セカンドメニューがないやつ
             if ( selectMainMenuItemName == "CopyApp" || selectMainMenuItemName == "CalcApp" ) {
                 this.Visible = false;
                 this.Opacity = 0;
@@ -45,14 +49,10 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton = null;
 
             // ----- アイテム表示 -----
-            // count
             int elementNum = secondMenuItemData.Count;
 
             // アイテムを設定
             string[] title = new string[elementNum];
-            string[] imgpath = new string[elementNum];
-
-            //imgpath = 
 
             // フォームサイズ
             double formsize = 0;
@@ -64,7 +64,23 @@ namespace SimpleShortcutMenu01 {
                 try {
                     switch ( this.selectMainMenuItemName ) {
                         case "Web":
-                            if ( (string)secondMenuItemData[i]["imagePath"] == "" ) secondMenuItemData[i]["imagePath"] = secondMenuItemData[i]["url"].ToString () + @"/favicon.ico";
+                            if ( (string)secondMenuItemData[i]["imagePath"] == "" ) {
+                                secondMenuItemData[i]["imagePath"] = secondMenuItemData[i]["url"].ToString () + @"/favicon.ico";
+
+                                //string url = "http://www.atmarkit.co.jp/nosuchpage.html";
+                                WebRequest.DefaultWebProxy = null; // プロキシ未使用を明示
+
+                                HttpStatusCode statusCode = GetStatusCode ( secondMenuItemData[i]["imagePath"].ToString () );
+
+                                int code = (int)statusCode; // 列挙体の値を数値に変換
+
+                                if ( code >= 400 ) { // 4xx、5xxはアクセス失敗とする
+                                    secondMenuItemData[i]["imagePath"] = "";
+                                } 
+                                //else {
+                                //    Console.WriteLine ( "ページは存在します：" + code );
+                                //}
+                            }
                             break;
                         case "App":
                             // ソフトのショートカットアイコンを取得
@@ -107,6 +123,39 @@ namespace SimpleShortcutMenu01 {
 
             // フォームリサイズ
             this.Size = new Size ( this.manySecoundMenuItemButton[0].Width, (int)formsize );
+        }
+
+        /// <summary>
+        /// urlにアクセスしてステータス・コードを返す
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        static public HttpStatusCode GetStatusCode ( string url ) {
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create ( url );
+            HttpWebResponse res = null;
+            HttpStatusCode statusCode;
+
+            try {
+                res = (HttpWebResponse)req.GetResponse ();
+                statusCode = res.StatusCode;
+            } catch ( WebException ex ) {
+                res = (HttpWebResponse)ex.Response;
+                if ( res != null ) {
+                    statusCode = res.StatusCode;
+                } else {
+                    throw; // サーバ接続不可などの場合は再スロー
+                }
+            } finally {
+                if ( res != null ) {
+                    res.Close ();
+                }
+            }
+            return statusCode;
+        }
+
+        // 非アクティブ化時
+        private void SecondMenuForm_Deactivate ( object sender, EventArgs e ) {
+            this.Close ();
         }
     }
 }

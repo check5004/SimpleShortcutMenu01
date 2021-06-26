@@ -188,9 +188,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CopyGray.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\テスト修正版01.png" />
   </ItemGroup>
   <ItemGroup>
@@ -203,6 +200,21 @@
     <None Include="Resources\HomeIconYellow.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\FileYelow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuItemData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CalcYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyDarkYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CopyGray.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\CopyYellow.png" />
   </ItemGroup>
   <ItemGroup>
@@ -212,7 +224,7 @@
     <None Include="Resources\FileGray.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FileYelow.png" />
+    <None Include="Resources\FileYellow.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FolderDarkYellow.png" />
@@ -231,6 +243,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\InternetYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinusDarkYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinusGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinusYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotFoundDarkYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotFoundGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NotFoundYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlusDarkYellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlusGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlusYellow.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SettingDarkYellow.png" />
@@ -255,15 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CalcGray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CalcYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CopyDarkYellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\menuItemData.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

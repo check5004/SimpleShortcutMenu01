@@ -163,10 +163,11 @@ namespace SimpleShortcutMenu01 {
             Layered.UpdateLayer ( this, imageGray, 220 );
 
             // セカンドフォームが表示されていたら閉じる
-            //if ( Config.secondMenuForm != null ) {
-            //    Config.secondMenuForm.Close ();
-            //    Config.secondMenuForm = null;
-            //}
+            //System.Threading.Thread.Sleep ( 100 );
+            if ( Config.secondMenuForm != null && Config.secondMenuFormInMouse == true) {
+                Config.secondMenuForm.Close ();
+                Config.secondMenuForm = null;
+            }
         }
 
         /// <summary>

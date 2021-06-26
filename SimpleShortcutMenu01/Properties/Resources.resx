@@ -151,6 +151,9 @@
   <data name="FileGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FileGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FileYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FileYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="FileYelow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FileYelow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,6 +177,33 @@
   </data>
   <data name="menuItemData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuItemData.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
+  </data>
+  <data name="MinusDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinusDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinusGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinusGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinusYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinusYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NotFoundDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotFoundDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NotFoundGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotFoundGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NotFoundYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NotFoundYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlusDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlusDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlusGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlusGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlusYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlusYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SettingDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
