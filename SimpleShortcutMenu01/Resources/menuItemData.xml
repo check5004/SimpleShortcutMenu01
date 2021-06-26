@@ -5,6 +5,7 @@
     <title>Google</title>
     <url>https://google.com</url>
     <comment>googleページ</comment>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -12,6 +13,7 @@
     <title>Yahoo</title>
     <url>https://yahoo.co.jp</url>
     <comment>Yahooページ</comment>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>App</menuName>
@@ -19,6 +21,7 @@
     <title>電卓</title>
     <url>filepath</url>
     <comment>電卓アプリ</comment>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>App</menuName>
@@ -26,6 +29,7 @@
     <title>CopyAssist</title>
     <url>filepath</url>
     <comment>あらかじめ設定しておいたテキストをクリックだけでクリップボードにコピーしてくれるアプリ</comment>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>App</menuName>
@@ -33,6 +37,7 @@
     <title>Word</title>
     <url>filepath</url>
     <comment>Microsoft Office</comment>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>App</menuName>
@@ -40,6 +45,7 @@
     <title>Excel</title>
     <url>filepath</url>
     <comment>Microsoft Office</comment>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>App</menuName>
@@ -47,16 +53,54 @@
     <title>Power Point</title>
     <url>filepath</url>
     <comment>Microsoft Office</comment>
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>CalcApp</menuName>
+    <scondMenuName />
+    <title />
+    <url />
+    <comment />
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>CopyApp</menuName>
+    <scondMenuName />
+    <title />
+    <url />
+    <comment />
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Folder</menuName>
+    <scondMenuName>File</scondMenuName>
+    <title>file1</title>
+    <url>filepath</url>
+    <comment />
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
-    <menuName>File</menuName>
+    <menuName>Folder</menuName>
+    <scondMenuName>File</scondMenuName>
+    <title>file2</title>
+    <url>filepath</url>
+    <comment />
+    <imagePath />
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Folder</menuName>
+    <scondMenuName>Folder</scondMenuName>
+    <title>folder1</title>
+    <url>folderpath</url>
+    <comment />
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Setting</menuName>
     <scondMenuName>設定項目</scondMenuName>
     <title>設定項目</title>
+    <url />
+    <comment />
+    <imagePath />
   </DataTable_MenuItems>
 </DataSet_MenuItems>

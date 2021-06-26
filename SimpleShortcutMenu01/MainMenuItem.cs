@@ -34,15 +34,20 @@ namespace SimpleShortcutMenu01 {
                     imageYellow = Properties.Resources.AppYellow;
                     imageDarkYellow = Properties.Resources.AppDarkYellow;
                     break;
+                case "CalcApp":
+                    imageGray = Properties.Resources.CalcGray;
+                    imageYellow = Properties.Resources.CalcYellow;
+                    imageDarkYellow = Properties.Resources.CalcDarkYellow;
+                    break;
+                case "CopyApp":
+                    imageGray = Properties.Resources.CopyGray;
+                    imageYellow = Properties.Resources.CopyYellow;
+                    imageDarkYellow = Properties.Resources.CopyDarkYellow;
+                    break;
                 case "Folder":
                     imageGray = Properties.Resources.FolderGray;
                     imageYellow = Properties.Resources.FolderYellow;
                     imageDarkYellow = Properties.Resources.FolderDarkYellow;
-                    break;
-                case "File":
-                    imageGray = Properties.Resources.FileGray;
-                    imageYellow = Properties.Resources.FileYelow;
-                    imageDarkYellow = Properties.Resources.FileDarkYellow;
                     break;
                 case "Setting":
                     imageGray = Properties.Resources.SettingGray;

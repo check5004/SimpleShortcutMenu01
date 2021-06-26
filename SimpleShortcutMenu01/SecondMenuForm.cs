@@ -12,8 +12,6 @@ namespace SimpleShortcutMenu01 {
     public partial class SecondMenuForm : Form {
 
         private SecondMenuItem[] manySecoundMenuItemButton;
-        // 選択項目数
-        private int elementNum = 0;
         /// <summary>
         /// メインメニューで選択された項目名
         /// </summary>
@@ -32,6 +30,23 @@ namespace SimpleShortcutMenu01 {
             // セカンド項目取得
             secondMenuItemData = Config.dataSet_MenuItems.AsEnumerable ().Where ( r => r.Field<string> ( "menuName" ) == selectMainMenuItemName ).ToList ();
 
+            switch ( this.selectMainMenuItemName ) {
+                case "Web":
+                    
+                    break;
+                case "App":
+                    
+                    break;
+                case "":
+                    
+                    break;
+                case "Folder":
+                   
+                    break;
+                case "Setting":
+                    
+                    break;
+            }
         }
 
         private void SecondMenuForm_Load ( object sender, EventArgs e ) {
@@ -42,7 +57,7 @@ namespace SimpleShortcutMenu01 {
 
             // ----- アイテム表示 -----
             // count
-            elementNum = secondMenuItemData.Count;
+            int elementNum = secondMenuItemData.Count;
 
             // アイテムを設定
             string[] title = new string[elementNum];

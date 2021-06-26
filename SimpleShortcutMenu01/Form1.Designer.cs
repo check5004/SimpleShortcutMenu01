@@ -26,17 +26,14 @@ namespace SimpleShortcutMenu01 {
         private void InitializeComponent () {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataSetMenuItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_MenuItems = new SimpleShortcutMenu01.DataSet_MenuItems();
             this.button_DataSetSave = new System.Windows.Forms.Button();
             this.button_DataSetLoad = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataSetMenuItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_MenuItems = new SimpleShortcutMenu01.DataSet_MenuItems();
-            this.menuNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scondMenuNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.commentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imagePathDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button_insert = new System.Windows.Forms.Button();
+            this.button_itemUp = new System.Windows.Forms.Button();
+            this.button_itemDown = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetMenuItemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_MenuItems)).BeginInit();
@@ -44,23 +41,22 @@ namespace SimpleShortcutMenu01 {
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.menuNameDataGridViewTextBoxColumn,
-            this.scondMenuNameDataGridViewTextBoxColumn,
-            this.titleDataGridViewTextBoxColumn,
-            this.urlDataGridViewTextBoxColumn,
-            this.commentDataGridViewTextBoxColumn,
-            this.imagePathDataGridViewTextBoxColumn});
-            this.dataGridView1.DataMember = "DataTable_MenuItems";
-            this.dataGridView1.DataSource = this.dataSetMenuItemsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
             this.dataGridView1.Size = new System.Drawing.Size(990, 414);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // dataSetMenuItemsBindingSource
+            // 
+            this.dataSetMenuItemsBindingSource.DataSource = this.dataSet_MenuItems;
+            this.dataSetMenuItemsBindingSource.Position = 0;
+            // 
+            // dataSet_MenuItems
+            // 
+            this.dataSet_MenuItems.DataSetName = "DataSet_MenuItems";
+            this.dataSet_MenuItems.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // button_DataSetSave
             // 
@@ -84,71 +80,43 @@ namespace SimpleShortcutMenu01 {
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(244, 432);
+            this.button3.Location = new System.Drawing.Point(694, 432);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(564, 23);
+            this.button3.Size = new System.Drawing.Size(207, 23);
             this.button3.TabIndex = 6;
             this.button3.Text = "Delete";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dataSetMenuItemsBindingSource
+            // button_insert
             // 
-            this.dataSetMenuItemsBindingSource.DataSource = this.dataSet_MenuItems;
-            this.dataSetMenuItemsBindingSource.Position = 0;
+            this.button_insert.Location = new System.Drawing.Point(117, 432);
+            this.button_insert.Name = "button_insert";
+            this.button_insert.Size = new System.Drawing.Size(203, 23);
+            this.button_insert.TabIndex = 7;
+            this.button_insert.Text = "insert";
+            this.button_insert.UseVisualStyleBackColor = true;
+            this.button_insert.Click += new System.EventHandler(this.button_insert_Click);
             // 
-            // dataSet_MenuItems
+            // button_itemUp
             // 
-            this.dataSet_MenuItems.DataSetName = "DataSet_MenuItems";
-            this.dataSet_MenuItems.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button_itemUp.Location = new System.Drawing.Point(412, 432);
+            this.button_itemUp.Name = "button_itemUp";
+            this.button_itemUp.Size = new System.Drawing.Size(75, 23);
+            this.button_itemUp.TabIndex = 8;
+            this.button_itemUp.Text = "↑";
+            this.button_itemUp.UseVisualStyleBackColor = true;
+            this.button_itemUp.Click += new System.EventHandler(this.button_itemUp_Click);
             // 
-            // menuNameDataGridViewTextBoxColumn
+            // button_itemDown
             // 
-            this.menuNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.menuNameDataGridViewTextBoxColumn.DataPropertyName = "menuName";
-            this.menuNameDataGridViewTextBoxColumn.HeaderText = "menuName";
-            this.menuNameDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.menuNameDataGridViewTextBoxColumn.Name = "menuNameDataGridViewTextBoxColumn";
-            // 
-            // scondMenuNameDataGridViewTextBoxColumn
-            // 
-            this.scondMenuNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.scondMenuNameDataGridViewTextBoxColumn.DataPropertyName = "scondMenuName";
-            this.scondMenuNameDataGridViewTextBoxColumn.HeaderText = "scondMenuName";
-            this.scondMenuNameDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.scondMenuNameDataGridViewTextBoxColumn.Name = "scondMenuNameDataGridViewTextBoxColumn";
-            // 
-            // titleDataGridViewTextBoxColumn
-            // 
-            this.titleDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.titleDataGridViewTextBoxColumn.DataPropertyName = "title";
-            this.titleDataGridViewTextBoxColumn.HeaderText = "title";
-            this.titleDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            // 
-            // urlDataGridViewTextBoxColumn
-            // 
-            this.urlDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.urlDataGridViewTextBoxColumn.DataPropertyName = "url";
-            this.urlDataGridViewTextBoxColumn.HeaderText = "url";
-            this.urlDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.urlDataGridViewTextBoxColumn.Name = "urlDataGridViewTextBoxColumn";
-            // 
-            // commentDataGridViewTextBoxColumn
-            // 
-            this.commentDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.commentDataGridViewTextBoxColumn.DataPropertyName = "comment";
-            this.commentDataGridViewTextBoxColumn.HeaderText = "comment";
-            this.commentDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.commentDataGridViewTextBoxColumn.Name = "commentDataGridViewTextBoxColumn";
-            // 
-            // imagePathDataGridViewTextBoxColumn
-            // 
-            this.imagePathDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCellsExceptHeader;
-            this.imagePathDataGridViewTextBoxColumn.DataPropertyName = "imagePath";
-            this.imagePathDataGridViewTextBoxColumn.HeaderText = "imagePath";
-            this.imagePathDataGridViewTextBoxColumn.MinimumWidth = 100;
-            this.imagePathDataGridViewTextBoxColumn.Name = "imagePathDataGridViewTextBoxColumn";
+            this.button_itemDown.Location = new System.Drawing.Point(522, 432);
+            this.button_itemDown.Name = "button_itemDown";
+            this.button_itemDown.Size = new System.Drawing.Size(75, 23);
+            this.button_itemDown.TabIndex = 9;
+            this.button_itemDown.Text = "↓";
+            this.button_itemDown.UseVisualStyleBackColor = true;
+            this.button_itemDown.Click += new System.EventHandler(this.button_itemDown_Click);
             // 
             // Form1
             // 
@@ -156,6 +124,9 @@ namespace SimpleShortcutMenu01 {
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1014, 467);
+            this.Controls.Add(this.button_itemDown);
+            this.Controls.Add(this.button_itemUp);
+            this.Controls.Add(this.button_insert);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button_DataSetLoad);
             this.Controls.Add(this.button_DataSetSave);
@@ -176,12 +147,9 @@ namespace SimpleShortcutMenu01 {
         private System.Windows.Forms.Button button_DataSetSave;
         private System.Windows.Forms.Button button_DataSetLoad;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn menuNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scondMenuNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn commentDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imagePathDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button_insert;
+        private System.Windows.Forms.Button button_itemUp;
+        private System.Windows.Forms.Button button_itemDown;
     }
 }
 
