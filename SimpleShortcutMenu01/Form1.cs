@@ -10,21 +10,12 @@ using System.Windows.Forms;
 
 namespace SimpleShortcutMenu01 {
     public partial class Form1 : Form {
-        // フォーム呼び出しで作成するボタン(Windowsフォームのボタン - Buttonを継承する)
-        //private Kazumi75Button[] manyButtons;
-        private SecondMenuItem[] manySecoundMenuItemButton;
-
-        // 配列の要素数(ここでは5個)
-        private const int ElementNum = 10;
-
         public static List<MainMenuItem> mainMenuItem = new List<MainMenuItem> ();
 
         public Form1 () {
             InitializeComponent ();
 
             Config.changing = false;
-            // test
-
 
             // show
             DataSet_MenuItems dataSet_MenuItems = new DataSet_MenuItems ();
@@ -44,7 +35,6 @@ namespace SimpleShortcutMenu01 {
                 mainMenuItem.Add ( new MainMenuItem ( coClear[i] ) );
 
                 mainMenuItem[i].StartPosition = FormStartPosition.Manual;
-                //mainMenuItem[i].Show ();
             }
 
             // 表示位置指定
@@ -57,48 +47,12 @@ namespace SimpleShortcutMenu01 {
                 item.Show ();
             }
 
-            this.manySecoundMenuItemButton = null;
+            // DataGrid 表示
+            button_DataSetLoad_Click ( new object(), new EventArgs() );
         }
 
-        int i = 0;
-
-        // フォームを呼び出すボタン
-        private void button1_Click ( object sender, EventArgs e ) {
-            if ( ElementNum <= i ) {
-                MessageBox.Show ( "追加上限です" );
-                return;
-            }
-
-            // ボタンの各メッセージはここであらかじめ設定する
-            string[] msgs = new string[ElementNum];
-            msgs[i] = $"Item{i + 1}";
-
-            #region original
-            // test
-            //this.manySecoundMenuItemButton = new SecondMenuItem[ElementNum];
-            //// インスタンス作成
-            //this.manySecoundMenuItemButton[i] = new SecondMenuItem ();
-            //// 名前とテキストのプロパティを設定
-            //this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
-            //this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
-            //this.manySecoundMenuItemButton[i].labelText = "MenuItem" + ( i + 1 );
-            //this.manySecoundMenuItemButton[i].imagePath = @"";
-            //// ボタンクリック時に参照するリストボックスを指定
-            //// メッセージを設定
-            //this.manySecoundMenuItemButton[i].buttonMsg = msgs[i];
-            //// サイズと配置
-            ////this.manySecoundMenuItemButton[i].Size = new Size ( 120, 50 );
-            //this.manySecoundMenuItemButton[i].Location = new Point ( 10, 10 + i * 47 );
-            //// フォームへの追加
-            //this.Controls.Add ( this.manySecoundMenuItemButton[i] );
-            #endregion
-
-            i++;
-        }
-
-
-        //private DataSet_MenuItems dataSet_MenuItems2 = new DataSet_MenuItems ();
-
+        #region DataGridView操作
+        // Save
         private void button_DataSetSave_Click ( object sender, EventArgs e ) {
             dataSet_MenuItems.Tables[0].Rows.Clear ();
 
@@ -112,15 +66,11 @@ namespace SimpleShortcutMenu01 {
 
             DataLoad.OutputXML ( dataSet_MenuItems.DataTable_MenuItems.DataSet );
             MessageBox.Show ( "保存しました。\n再起動します。" );
-            Application.Restart ();  // 再起動
 
-            // reload
-            //dataSet_MenuItems.Clear ();
-            //var mainMenuItems = DataLoad.GetXMLDate ( dataSet_MenuItems );
-            //Config.dataSet_MenuItems = mainMenuItems.Tables[0];
-            //button_DataSetLoad_Click ( sender, e );
+            Application.Restart ();  // 再起動
         }
 
+        // Load
         private void button_DataSetLoad_Click ( object sender, EventArgs e ) {
             if ( dataGridView1.RowCount > 1 ) {
                 dataGridView1.Rows.Clear ();
@@ -206,5 +156,6 @@ namespace SimpleShortcutMenu01 {
                 dataGridView1.Rows[selectRowIndex + 1].Selected = true;
             } catch { return; }
         }
+        #endregion
     }
 }

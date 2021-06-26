@@ -11,31 +11,31 @@
     <menuName>Web</menuName>
     <scondMenuName>Yahoo</scondMenuName>
     <title>Yahoo</title>
-    <url>https://yahoo.co.jp</url>
+    <url>https://www.yahoo.co.jp</url>
     <comment>Yahooページ</comment>
     <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
-    <menuName>App</menuName>
-    <scondMenuName>電卓</scondMenuName>
-    <title>電卓</title>
-    <url>filepath</url>
-    <comment>電卓アプリ</comment>
+    <menuName>Web</menuName>
+    <scondMenuName>YouTube</scondMenuName>
+    <title>YouTube</title>
+    <url>https://www.youtube.com</url>
+    <comment>ようつべ</comment>
     <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
-    <menuName>App</menuName>
-    <scondMenuName>CopyAssist</scondMenuName>
-    <title>CopyAssist</title>
-    <url>filepath</url>
-    <comment>あらかじめ設定しておいたテキストをクリックだけでクリップボードにコピーしてくれるアプリ</comment>
+    <menuName>Web</menuName>
+    <scondMenuName>GitHub</scondMenuName>
+    <title>GitHub</title>
+    <url>https://github.com</url>
+    <comment>github</comment>
     <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>App</menuName>
     <scondMenuName>Word</scondMenuName>
     <title>Word</title>
-    <url>filepath</url>
+    <url>C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</url>
     <comment>Microsoft Office</comment>
     <imagePath />
   </DataTable_MenuItems>
@@ -43,7 +43,7 @@
     <menuName>App</menuName>
     <scondMenuName>Excel</scondMenuName>
     <title>Excel</title>
-    <url>filepath</url>
+    <url>C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</url>
     <comment>Microsoft Office</comment>
     <imagePath />
   </DataTable_MenuItems>
@@ -51,7 +51,7 @@
     <menuName>App</menuName>
     <scondMenuName>Power Point</scondMenuName>
     <title>Power Point</title>
-    <url>filepath</url>
+    <url>C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE</url>
     <comment>Microsoft Office</comment>
     <imagePath />
   </DataTable_MenuItems>
@@ -97,9 +97,9 @@
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Setting</menuName>
-    <scondMenuName>設定項目</scondMenuName>
-    <title>設定項目</title>
-    <url />
+    <scondMenuName>OpenForm</scondMenuName>
+    <title>DataSet Setting</title>
+    <url>Form1</url>
     <comment />
     <imagePath />
   </DataTable_MenuItems>
