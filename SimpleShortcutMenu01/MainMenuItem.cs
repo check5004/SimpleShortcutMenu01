@@ -133,7 +133,7 @@ namespace SimpleShortcutMenu01 {
             // 透過画像表示
             Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
-            //SecondMenuItemView ( sender );
+            SecondMenuItemView ( sender );
         }
 
         /// <summary>

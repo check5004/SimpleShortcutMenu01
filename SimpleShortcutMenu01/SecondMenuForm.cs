@@ -67,19 +67,14 @@ namespace SimpleShortcutMenu01 {
                             if ( (string)secondMenuItemData[i]["imagePath"] == "" ) {
                                 secondMenuItemData[i]["imagePath"] = secondMenuItemData[i]["url"].ToString () + @"/favicon.ico";
 
-                                //string url = "http://www.atmarkit.co.jp/nosuchpage.html";
                                 WebRequest.DefaultWebProxy = null; // プロキシ未使用を明示
 
                                 HttpStatusCode statusCode = GetStatusCode ( secondMenuItemData[i]["imagePath"].ToString () );
 
                                 int code = (int)statusCode; // 列挙体の値を数値に変換
-
                                 if ( code >= 400 ) { // 4xx、5xxはアクセス失敗とする
                                     secondMenuItemData[i]["imagePath"] = "";
                                 } 
-                                //else {
-                                //    Console.WriteLine ( "ページは存在します：" + code );
-                                //}
                             }
                             break;
                         case "App":
@@ -110,6 +105,8 @@ namespace SimpleShortcutMenu01 {
                 } else {
                     this.manySecoundMenuItemButton[i].imagePath = secondMenuItemData[i]["imagePath"].ToString ();
                 }
+                this.manySecoundMenuItemButton[i].secondMenuItemData = this.secondMenuItemData[i];
+                this.manySecoundMenuItemButton[i].selectMainMenuitemName = this.selectMainMenuItemName;
                 // メッセージを設定
                 this.manySecoundMenuItemButton[i].buttonMsg = title[i];
                 // サイズと配置
@@ -155,7 +152,8 @@ namespace SimpleShortcutMenu01 {
 
         // 非アクティブ化時
         private void SecondMenuForm_Deactivate ( object sender, EventArgs e ) {
-            this.Close ();
+            //this.Close ();  /// バグ！！！！！！！！！！！！！！！！！！！！
+            //Config.secondMenuForm.Close ();  // だめ
         }
     }
 }
