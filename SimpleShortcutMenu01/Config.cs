@@ -29,7 +29,6 @@ namespace SimpleShortcutMenu01 {
         /// <summary>
         /// 起動チェック
         /// </summary>
-        public static bool kidou { get; set; }  // test
         public static bool changing { get; set; }
         public static int mainMenuItemCount { get; set; }
 

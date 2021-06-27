@@ -1,19 +1,19 @@
 ﻿<DataSet_MenuItems xmlns="http://tempuri.org/DataSet_MenuItems.xsd">
   <DataTable_MenuItems>
     <menuName>Web</menuName>
-    <scondMenuName>Google</scondMenuName>
-    <title>Google</title>
-    <url>https://google.com</url>
-    <comment>googleページ</comment>
-    <imagePath />
-  </DataTable_MenuItems>
-  <DataTable_MenuItems>
-    <menuName>Web</menuName>
     <scondMenuName>Yahoo</scondMenuName>
     <title>Yahoo</title>
     <url>https://www.yahoo.co.jp</url>
     <comment>Yahooページ</comment>
-    <imagePath />
+    <imagePath>https://www.yahoo.co.jp/favicon.ico</imagePath>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Google</scondMenuName>
+    <title>Google</title>
+    <url>https://google.com</url>
+    <comment>googleページ</comment>
+    <imagePath>https://google.com/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -21,7 +21,7 @@
     <title>YouTube</title>
     <url>https://www.youtube.com</url>
     <comment>ようつべ</comment>
-    <imagePath />
+    <imagePath>https://www.youtube.com/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -29,7 +29,7 @@
     <title>GitHub</title>
     <url>https://github.com</url>
     <comment>github</comment>
-    <imagePath />
+    <imagePath>https://github.com/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -37,7 +37,7 @@
     <title>Amazon</title>
     <url>https://amazon.com</url>
     <comment>Amazon</comment>
-    <imagePath />
+    <imagePath>https://amazon.com/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>

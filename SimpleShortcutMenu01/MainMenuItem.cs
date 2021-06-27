@@ -70,6 +70,8 @@ namespace SimpleShortcutMenu01 {
                 return;
             }
 
+            Config.changing = true;
+
             int formi = 0;
             // 変更されたフォームと座標取得
             for ( int i = 0; i < Form1.mainMenuItem.Count; i++ ) {
@@ -77,8 +79,6 @@ namespace SimpleShortcutMenu01 {
                     formi = i;
                 }
             }
-
-            Config.changing = true;
 
             int count1 = 1;
             int count2 = 1;
@@ -93,7 +93,6 @@ namespace SimpleShortcutMenu01 {
             }
 
             Config.changing = false;
-            Config.kidou = true;
         }
 
 
@@ -134,7 +133,7 @@ namespace SimpleShortcutMenu01 {
             // 透過画像表示
             Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
-            SecondMenuItemView ( sender );
+            //SecondMenuItemView ( sender );
         }
 
         /// <summary>
@@ -164,10 +163,10 @@ namespace SimpleShortcutMenu01 {
 
             // セカンドフォームが表示されていたら閉じる
             //System.Threading.Thread.Sleep ( 100 );
-            if ( Config.secondMenuForm != null && Config.secondMenuFormInMouse == true) {
-                Config.secondMenuForm.Close ();
-                Config.secondMenuForm = null;
-            }
+            //if ( Config.secondMenuForm != null && Config.secondMenuFormInMouse == true) {
+            //    Config.secondMenuForm.Close ();
+            //    Config.secondMenuForm = null;
+            //}
         }
 
         /// <summary>
