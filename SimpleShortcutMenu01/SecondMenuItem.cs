@@ -58,6 +58,9 @@ namespace SimpleShortcutMenu01 {
                         MessageBox.Show ( "アプリを起動できません。" );
                     }
                     break;
+                case "Folder":
+
+                    break;
                 case "Setting":
                     try {
                         switch ( secondMenuItemData["url"].ToString () ) {
