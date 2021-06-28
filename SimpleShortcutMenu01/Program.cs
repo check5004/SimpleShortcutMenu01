@@ -12,8 +12,8 @@ namespace SimpleShortcutMenu01 {
         [STAThread]
         static void Main () {
             Application.EnableVisualStyles ();
-            Application.SetCompatibleTextRenderingDefault ( false );
-            Application.Run ( new Form1 () );
+            //Application.SetCompatibleTextRenderingDefault ( false );
+            Application.Run ( Config.mainMenuShowForm );
         }
     }
 }

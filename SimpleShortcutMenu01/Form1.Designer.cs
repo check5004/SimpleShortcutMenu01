@@ -171,8 +171,6 @@ namespace SimpleShortcutMenu01 {
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "DataEdditer";
-            this.Activated += new System.EventHandler(this.Form1_Activated);
-            this.Deactivate += new System.EventHandler(this.Form1_Deactivate);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetMenuItemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_MenuItems)).EndInit();

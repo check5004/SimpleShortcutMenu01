@@ -143,4 +143,12 @@
     <comment />
     <imagePath />
   </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Setting</menuName>
+    <scondMenuName>Logout</scondMenuName>
+    <title>Logout</title>
+    <url>Logout</url>
+    <comment />
+    <imagePath />
+  </DataTable_MenuItems>
 </DataSet_MenuItems>

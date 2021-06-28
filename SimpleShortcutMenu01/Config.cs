@@ -10,6 +10,8 @@ using System.Windows.Forms;
 
 namespace SimpleShortcutMenu01 {
     class Config {
+        public static MainMenuShowForm mainMenuShowForm = new MainMenuShowForm ();
+
         /// <summary>
         /// マウス座標
         /// </summary>

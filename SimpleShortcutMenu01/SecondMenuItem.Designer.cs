@@ -51,6 +51,7 @@ namespace SimpleShortcutMenu01 {
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(50, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 32);
@@ -66,9 +67,10 @@ namespace SimpleShortcutMenu01 {
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Violet;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "SecondMenuItem";
             this.Size = new System.Drawing.Size(250, 55);
             this.Load += new System.EventHandler(this.SecondMenuItem_Load);

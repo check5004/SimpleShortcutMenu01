@@ -60,39 +60,6 @@ namespace SimpleShortcutMenu01 {
             this.manySecoundMenuItemButton = new SecondMenuItem[elementNum];
 
             for ( int i = 0; i < elementNum; i++ ) {
-                //Bitmap iconImage = null;
-
-                // test!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                //try {
-                //    switch ( this.selectMainMenuItemName ) {
-                //        case "Web":
-                //            if ( (string)secondMenuItemData[i]["imagePath"] == "" ) {
-                //                secondMenuItemData[i]["imagePath"] = secondMenuItemData[i]["url"].ToString () + @"/favicon.ico";
-
-                //                WebRequest.DefaultWebProxy = null; // プロキシ未使用を明示
-
-                //                HttpStatusCode statusCode = GetStatusCode ( secondMenuItemData[i]["imagePath"].ToString () );
-
-                //                int code = (int)statusCode; // 列挙体の値を数値に変換
-                //                if ( code >= 400 ) { // 4xx、5xxはアクセス失敗とする
-                //                    secondMenuItemData[i]["imagePath"] = "";
-                //                }
-                //            }
-                //            break;
-                //        case "App":
-                //            // ソフトのショートカットアイコンを取得
-                //            Icon appIcon = System.Drawing.Icon.ExtractAssociatedIcon ( secondMenuItemData[i]["url"].ToString () );
-                //            iconImage = appIcon.ToBitmap ();
-                //            break;
-                //        case "Folder":
-                //            if ( (string)secondMenuItemData[i]["scondMenuName"] == "Folder" ) { iconImage = Properties.Resources.FolderGray; }
-                //            if ( (string)secondMenuItemData[i]["scondMenuName"] == "File" ) { iconImage = Properties.Resources.FileGray; }
-                //            break;
-                //        case "Setting":
-                //            iconImage = Properties.Resources.SettingGray;
-                //            break;
-                //    }
-                //} catch { }
 
                 title[i] = secondMenuItemData[i]["title"].ToString ();
 
@@ -102,13 +69,6 @@ namespace SimpleShortcutMenu01 {
                 this.manySecoundMenuItemButton[i].Name = "SecondMenuItem" + i;
                 this.manySecoundMenuItemButton[i].Text = "SecondMenuItem" + ( i + 1 );
                 this.manySecoundMenuItemButton[i].labelText = title[i];
-                ///////////////////////////////////
-                //if ( (string)secondMenuItemData[i]["imagePath"] == "" ) {
-                //    this.manySecoundMenuItemButton[i].iconBitmap = iconImage;
-                //} else {
-                //    this.manySecoundMenuItemButton[i].imagePath = secondMenuItemData[i]["imagePath"].ToString ();
-                //}
-                //////////////////////////////////////
                 this.manySecoundMenuItemButton[i].secondMenuItemData = this.secondMenuItemData[i];
                 this.manySecoundMenuItemButton[i].selectMainMenuItemName = this.selectMainMenuItemName;
                 // メッセージを設定
@@ -128,8 +88,7 @@ namespace SimpleShortcutMenu01 {
 
         // 非アクティブ化時
         private void SecondMenuForm_Deactivate ( object sender, EventArgs e ) {
-            //this.Close ();  /// バグ！！！！！！！！！！！！！！！！！！！！
-            //Config.secondMenuForm.Close ();  // だめ
+            Config.secondMenuForm.Opacity = 0;
         }
     }
 }

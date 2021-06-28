@@ -1,5 +1,6 @@
-﻿namespace SimpleShortcutMenu01 {
-    partial class SecondMenuForm {
+﻿
+namespace SimpleShortcutMenu01 {
+    partial class MainMenuShowForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -25,20 +26,16 @@
         private void InitializeComponent () {
             this.SuspendLayout();
             // 
-            // SecondMenuForm
+            // MainMenuShowForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LawnGreen;
-            this.ClientSize = new System.Drawing.Size(179, 487);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SecondMenuForm";
-            this.Opacity = 0.8D;
-            this.ShowInTaskbar = false;
-            this.Text = "SecondMenuForm";
-            this.TransparencyKey = System.Drawing.Color.LawnGreen;
-            this.Deactivate += new System.EventHandler(this.SecondMenuForm_Deactivate);
-            this.Load += new System.EventHandler(this.SecondMenuForm_Load);
+            this.ClientSize = new System.Drawing.Size(211, 213);
+            this.Name = "MainMenuShowForm";
+            this.Opacity = 0D;
+            this.Text = "MainMenuShowForm";
+            this.Activated += new System.EventHandler(this.MainMenuShowForm_Activated);
+            this.Deactivate += new System.EventHandler(this.MainMenuShowForm_Deactivate);
             this.ResumeLayout(false);
 
         }

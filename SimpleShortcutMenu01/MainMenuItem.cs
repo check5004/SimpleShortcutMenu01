@@ -74,8 +74,8 @@ namespace SimpleShortcutMenu01 {
 
             int formi = 0;
             // 変更されたフォームと座標取得
-            for ( int i = 0; i < Form1.mainMenuItem.Count; i++ ) {
-                if ( Form1.mainMenuItem[i] == Config.clickForm ) {
+            for ( int i = 0; i < MainMenuShow.mainMenuItem.Count; i++ ) {
+                if ( MainMenuShow.mainMenuItem[i] == Config.clickForm ) {
                     formi = i;
                 }
             }
@@ -83,12 +83,12 @@ namespace SimpleShortcutMenu01 {
             int count1 = 1;
             int count2 = 1;
             for ( int i = formi - 1; i >= 0; i-- ) {
-                Form1.mainMenuItem[i].Location = new Point ( this.Left, this.Top - ( count1 * 75 ) );
+                MainMenuShow.mainMenuItem[i].Location = new Point ( this.Left, this.Top - ( count1 * 75 ) );
                 count1++;
             }
 
-            for ( int i = formi + 1; i < Form1.mainMenuItem.Count; i++ ) {
-                Form1.mainMenuItem[i].Location = new Point ( this.Left, this.Top + ( count2 * 75 ) );
+            for ( int i = formi + 1; i < MainMenuShow.mainMenuItem.Count; i++ ) {
+                MainMenuShow.mainMenuItem[i].Location = new Point ( this.Left, this.Top + ( count2 * 75 ) );
                 count2++;
             }
 
@@ -102,6 +102,8 @@ namespace SimpleShortcutMenu01 {
             if ( ( e.Button & MouseButtons.Left ) == MouseButtons.Left ) {
                 Config.mousePoint = e.Location;
                 Config.clickForm = sender;
+                // 透過画像表示
+                Layered.UpdateLayer ( this, imageYellow, 220 );
             }
         }
 
@@ -130,6 +132,27 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void MainMenuItem_Click ( object sender, EventArgs e ) {
+            if ( mainMenuItemName == "CalcApp" ) {
+                try {
+                    System.Diagnostics.Process p = new System.Diagnostics.Process ();
+                    p.StartInfo.FileName = "dentaku.exe";
+                    p.Start ();
+                } catch {
+                    MessageBox.Show ( "アプリを起動できません。" );
+                }
+                return;
+            }
+            if ( mainMenuItemName == "CopyApp" ) {
+                try {
+                    System.Diagnostics.Process p = new System.Diagnostics.Process ();
+                    p.StartInfo.FileName = "copy.exe";
+                    p.Start ();
+                } catch {
+                    MessageBox.Show ( "アプリを起動できません。" );
+                }
+                return;
+            }
+
             // 透過画像表示
             Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
@@ -147,7 +170,7 @@ namespace SimpleShortcutMenu01 {
 
             // アプリ全体をアクティブにする
             // どのイベントでやるか要検討
-            foreach ( var item in Form1.mainMenuItem ) {
+            foreach ( var item in MainMenuShow.mainMenuItem ) {
                 item.Activate ();
             }
         }
@@ -160,13 +183,6 @@ namespace SimpleShortcutMenu01 {
         private void MainMenuItem_MouseLeave ( object sender, EventArgs e ) {
             // 透過画像表示
             Layered.UpdateLayer ( this, imageGray, 220 );
-
-            // セカンドフォームが表示されていたら閉じる
-            //System.Threading.Thread.Sleep ( 100 );
-            //if ( Config.secondMenuForm != null && Config.secondMenuFormInMouse == true) {
-            //    Config.secondMenuForm.Close ();
-            //    Config.secondMenuForm = null;
-            //}
         }
 
         /// <summary>
@@ -175,6 +191,10 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void MainMenuItem_MouseHover ( object sender, EventArgs e ) {
+            if ( mainMenuItemName == "CalcApp" || mainMenuItemName == "CopyApp" ) {
+                return;
+            }
+
             // 透過画像表示
             Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
@@ -195,7 +215,7 @@ namespace SimpleShortcutMenu01 {
             int itemNum = 0;  // 選択項目配列番号
             // 選択項目取得
             for ( int i = 0; i < Config.mainMenuItemCount; i++ ) {
-                if ( sender == Form1.mainMenuItem[i] ) {
+                if ( sender == MainMenuShow.mainMenuItem[i] ) {
                     itemNum = i;
                 }
             }
@@ -205,7 +225,7 @@ namespace SimpleShortcutMenu01 {
 
             // フォーム表示座標指定
             secondMenuForm.StartPosition = FormStartPosition.Manual;
-            secondMenuForm.Location = new Point ( Form1.mainMenuItem[itemNum].Location.X + Form1.mainMenuItem[itemNum].Width, (int)Form1.mainMenuItem[itemNum].Location.Y + 5 );  // 要調整！！！！！！！！！！！！！！！！！！！！！
+            secondMenuForm.Location = new Point ( MainMenuShow.mainMenuItem[itemNum].Location.X + MainMenuShow.mainMenuItem[itemNum].Width, (int)MainMenuShow.mainMenuItem[itemNum].Location.Y + 5 );  // 要調整！！！！！！！！！！！！！！！！！！！！！
 
             secondMenuForm.Show ();
         }

@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +29,7 @@ namespace SimpleShortcutMenu01 {
 
         private BackgroundWorker _getImageWorker = new BackgroundWorker ();
         private Bitmap iconImage = null;
+        private WebPreviewDialog webPreviewDialog;
 
 
         public SecondMenuItem () {
@@ -38,12 +40,13 @@ namespace SimpleShortcutMenu01 {
 
         private void SecondMenuItem_Load ( object sender, EventArgs e ) {
             this.label1.Text = labelText;
-
+            this.pictureBox1.Image = Properties.Resources.NotFoundGray;
             _getImageWorker.RunWorkerAsync ();
 
-            this.BackColor = Color.FromArgb ( 200, 200, 200 );
+            this.BackColor = Color.FromArgb ( 200,200,200 );
         }
 
+        #region 画像取得
         /// <summary>
         /// 画像取得(非同期)
         /// </summary>
@@ -82,6 +85,11 @@ namespace SimpleShortcutMenu01 {
             } catch { }
         }
 
+        /// <summary>
+        /// 取得した画像を貼り付け
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _getImageWorker_RunWorkerCompleted ( object sender, RunWorkerCompletedEventArgs e ) {
             if ( (string)secondMenuItemData["imagePath"] == "" ) {
                 iconBitmap = iconImage;
@@ -96,8 +104,7 @@ namespace SimpleShortcutMenu01 {
                 this.pictureBox1.ImageLocation = imagePath;
             }
         }
-
-
+        #endregion 画像取得
 
 
         /// <summary>
@@ -107,7 +114,7 @@ namespace SimpleShortcutMenu01 {
         /// <param name="e"></param>
         private void secondMenuItemClick ( object sender, EventArgs e ) {
             // クリック時
-            this.BackColor = Color.Yellow;
+            this.BackColor = Color.FromArgb ( 248, 206, 43 );
 
             switch ( selectMainMenuItemName ) {
                 case "Web":
@@ -138,6 +145,9 @@ namespace SimpleShortcutMenu01 {
                                 Form1 form1 = new Form1 ();
                                 form1.Show ();
                                 break;
+                            case "Logout":
+                                try { Config.mainMenuShowForm.Close (); } catch { }
+                                break;
                         }
                     } catch {
                         MessageBox.Show ( "Form open error..." );
@@ -152,9 +162,22 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SecoundMenuItemMouseHover ( object sender, EventArgs e ) {
-            // マウスホバー時
-            //this.BackColor = Color.Yellow;
-            //this.BackColor = Color.FromArgb ( 180, 180, 0 );
+            if ( webPreviewDialog != null ) {
+                webPreviewDialog.Close ();
+                webPreviewDialog = null;
+            }
+
+            switch ( selectMainMenuItemName ) {
+                case "Web":
+                    // web preview show!!
+                    webPreviewDialog = new WebPreviewDialog ( secondMenuItemData );
+                    webPreviewDialog.Opacity = 0;
+                    webPreviewDialog.Show ();
+                    webPreviewDialog.Location = new Point ( Config.secondMenuForm.Location.X + this.Width + 10, Config.secondMenuForm.Location.Y + this.Location.Y + (int)Math.Floor ( (double)this.Height / 2 ) - (int)Math.Floor ( (double)webPreviewDialog.maxHeight / 2 ) );
+                    webPreviewDialog.Opacity = 100;
+                    Config.secondMenuForm.Opacity = 100;
+                    break;
+            }
         }
 
         /// <summary>
@@ -163,7 +186,11 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SecoundMenuItemMouseLeave ( object sender, EventArgs e ) {
-            this.BackColor = Color.FromArgb ( 200, 200, 200 );
+            this.BackColor = Color.FromArgb ( 200,200,200 );
+            if ( webPreviewDialog != null ) {
+                webPreviewDialog.Close ();
+                webPreviewDialog = null;
+            }
         }
 
 
@@ -173,12 +200,12 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SecoundMenuItemMouseEnter ( object sender, EventArgs e ) {
-            this.BackColor = Color.FromArgb ( 180, 180, 0 );
+            this.BackColor = Color.FromArgb ( 162, 129, 0 );
         }
 
         private void SecondMenuItem_MouseDown ( object sender, MouseEventArgs e ) {
             if ( e.Button == MouseButtons.Left ) {
-                this.BackColor = Color.Yellow;
+                this.BackColor = Color.FromArgb ( 248, 206, 43 );
             }
         }
 
@@ -189,28 +216,36 @@ namespace SimpleShortcutMenu01 {
         /// <param name="url"></param>
         /// <returns></returns>
         static public HttpStatusCode GetStatusCode ( string url ) {
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create ( url );
-            HttpWebResponse res = null;
-            HttpStatusCode statusCode;
-            //var resp =   req.GetRequestStreamAsync () ;
-            //var xx = await req.GetRequestStreamAsync ();
-
             try {
-                res = (HttpWebResponse)req.GetResponse ();
-                statusCode = res.StatusCode;
-            } catch ( WebException ex ) {
-                res = (HttpWebResponse)ex.Response;
-                if ( res != null ) {
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create ( url );
+                req.Method = WebRequestMethods.Http.Get;
+                req.Timeout = 2800;
+                req.ReadWriteTimeout = 2800;
+
+                HttpWebResponse res = null;
+                HttpStatusCode statusCode;
+
+                try {
+                    res = (HttpWebResponse)req.GetResponse ();
                     statusCode = res.StatusCode;
-                } else {
-                    throw; // サーバ接続不可などの場合は再スロー
+                } catch ( WebException ex ) {
+                    res = (HttpWebResponse)ex.Response;
+                    if ( res != null ) {
+                        statusCode = res.StatusCode;
+                    } else {
+                        //return (HttpStatusCode)404;
+                        throw; // サーバ接続不可などの場合は再スロー
+                    }
+                } finally {
+                    if ( res != null ) {
+                        res.Close ();
+                    }
                 }
-            } finally {
-                if ( res != null ) {
-                    res.Close ();
-                }
+                Debug.WriteLine ( url + " : " + (int)statusCode );
+                return statusCode;
+            } catch ( Exception ) {
+                return (HttpStatusCode)404;
             }
-            return statusCode;
         }
     }
 }
