@@ -1,6 +1,8 @@
 ﻿
-namespace SimpleShortcutMenu01 {
-    partial class Form1 {
+namespace SimpleShortcutMenu01
+{
+    partial class Form1
+    {
         /// <summary>
         /// 必要なデザイナー変数です。
         /// </summary>
@@ -10,11 +12,13 @@ namespace SimpleShortcutMenu01 {
         /// 使用中のリソースをすべてクリーンアップします。
         /// </summary>
         /// <param name="disposing">マネージド リソースを破棄する場合は true を指定し、その他の場合は false を指定します。</param>
-        protected override void Dispose ( bool disposing ) {
-            if ( disposing && ( components != null ) ) {
-                components.Dispose ();
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
             }
-            base.Dispose ( disposing );
+            base.Dispose(disposing);
         }
 
         #region Windows フォーム デザイナーで生成されたコード
@@ -23,171 +27,166 @@ namespace SimpleShortcutMenu01 {
         /// デザイナー サポートに必要なメソッドです。このメソッドの内容を
         /// コード エディターで変更しないでください。
         /// </summary>
-        private void InitializeComponent () {
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSetMenuItemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_MenuItems = new SimpleShortcutMenu01.DataSet_MenuItems();
-            this.button_DataSetSave = new System.Windows.Forms.Button();
-            this.button_DataSetLoad = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button_insert = new System.Windows.Forms.Button();
-            this.button_itemUp = new System.Windows.Forms.Button();
-            this.button_itemDown = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetMenuItemsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_MenuItems)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pBoxOnly = new System.Windows.Forms.PictureBox();
+            this.pBoxBatu = new System.Windows.Forms.PictureBox();
+            this.pBoxMaru = new System.Windows.Forms.PictureBox();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxOnly)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxBatu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxMaru)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // tableLayoutPanel1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("UD デジタル 教科書体 N-B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("ＤＨＰ平成ゴシックW5", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(984, 450);
-            this.dataGridView1.TabIndex = 2;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.lblTitle, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.lblMessage, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, 1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(540, 339);
+            this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // dataSetMenuItemsBindingSource
+            // lblTitle
             // 
-            this.dataSetMenuItemsBindingSource.DataSource = this.dataSet_MenuItems;
-            this.dataSetMenuItemsBindingSource.Position = 0;
+            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(4, 1);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(532, 100);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Message Title";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MessageDialog_MouseDown);
+            this.lblTitle.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MessageDialog_MouseMove);
             // 
-            // dataSet_MenuItems
+            // panel1
             // 
-            this.dataSet_MenuItems.DataSetName = "DataSet_MenuItems";
-            this.dataSet_MenuItems.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.panel1.Controls.Add(this.pBoxOnly);
+            this.panel1.Controls.Add(this.pBoxBatu);
+            this.panel1.Controls.Add(this.pBoxMaru);
+            this.panel1.Location = new System.Drawing.Point(4, 241);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(532, 94);
+            this.panel1.TabIndex = 1;
             // 
-            // button_DataSetSave
+            // pBoxOnly
             // 
-            this.button_DataSetSave.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_DataSetSave.Location = new System.Drawing.Point(921, 468);
-            this.button_DataSetSave.Name = "button_DataSetSave";
-            this.button_DataSetSave.Size = new System.Drawing.Size(75, 23);
-            this.button_DataSetSave.TabIndex = 3;
-            this.button_DataSetSave.Text = "Save";
-            this.button_DataSetSave.UseVisualStyleBackColor = true;
-            this.button_DataSetSave.Click += new System.EventHandler(this.button_DataSetSave_Click);
+            this.pBoxOnly.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBoxOnly.BackgroundImage")));
+            this.pBoxOnly.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBoxOnly.Image = global::SimpleShortcutMenu01.Properties.Resources.BatuGray;
+            this.pBoxOnly.Location = new System.Drawing.Point(149, 10);
+            this.pBoxOnly.Name = "pBoxOnly";
+            this.pBoxOnly.Size = new System.Drawing.Size(232, 77);
+            this.pBoxOnly.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxOnly.TabIndex = 4;
+            this.pBoxOnly.TabStop = false;
+            this.pBoxOnly.Click += new System.EventHandler(this.CancelButton_Click);
+            this.pBoxOnly.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CancelButton_Down);
+            this.pBoxOnly.MouseEnter += new System.EventHandler(this.CancelButton_Enter);
+            this.pBoxOnly.MouseLeave += new System.EventHandler(this.CancelButton_Leave);
             // 
-            // button_DataSetLoad
+            // pBoxBatu
             // 
-            this.button_DataSetLoad.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_DataSetLoad.Location = new System.Drawing.Point(12, 468);
-            this.button_DataSetLoad.Name = "button_DataSetLoad";
-            this.button_DataSetLoad.Size = new System.Drawing.Size(75, 23);
-            this.button_DataSetLoad.TabIndex = 4;
-            this.button_DataSetLoad.Text = "Load";
-            this.button_DataSetLoad.UseVisualStyleBackColor = true;
-            this.button_DataSetLoad.Click += new System.EventHandler(this.button_DataSetLoad_Click);
+            this.pBoxBatu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBoxBatu.BackgroundImage")));
+            this.pBoxBatu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBoxBatu.Image = global::SimpleShortcutMenu01.Properties.Resources.BatuGray;
+            this.pBoxBatu.Location = new System.Drawing.Point(291, 11);
+            this.pBoxBatu.Name = "pBoxBatu";
+            this.pBoxBatu.Size = new System.Drawing.Size(232, 77);
+            this.pBoxBatu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxBatu.TabIndex = 3;
+            this.pBoxBatu.TabStop = false;
+            this.pBoxBatu.Click += new System.EventHandler(this.CancelButton_Click);
+            this.pBoxBatu.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CancelButton_Down);
+            this.pBoxBatu.MouseEnter += new System.EventHandler(this.CancelButton_Enter);
+            this.pBoxBatu.MouseLeave += new System.EventHandler(this.CancelButton_Leave);
             // 
-            // button3
+            // pBoxMaru
             // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button3.Location = new System.Drawing.Point(657, 468);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.pBoxMaru.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBoxMaru.BackgroundImage")));
+            this.pBoxMaru.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBoxMaru.Image = global::SimpleShortcutMenu01.Properties.Resources.MaruGray;
+            this.pBoxMaru.Location = new System.Drawing.Point(11, 11);
+            this.pBoxMaru.Name = "pBoxMaru";
+            this.pBoxMaru.Size = new System.Drawing.Size(232, 77);
+            this.pBoxMaru.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pBoxMaru.TabIndex = 2;
+            this.pBoxMaru.TabStop = false;
+            this.pBoxMaru.Click += new System.EventHandler(this.OkButton_Click);
+            this.pBoxMaru.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OkButton_MouseDown);
+            this.pBoxMaru.MouseEnter += new System.EventHandler(this.OkButton_MouseEnter);
+            this.pBoxMaru.MouseLeave += new System.EventHandler(this.OkButton_MouseLeave);
             // 
-            // button_insert
+            // lblMessage
             // 
-            this.button_insert.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_insert.Location = new System.Drawing.Point(159, 468);
-            this.button_insert.Name = "button_insert";
-            this.button_insert.Size = new System.Drawing.Size(203, 23);
-            this.button_insert.TabIndex = 7;
-            this.button_insert.Text = "insert";
-            this.button_insert.UseVisualStyleBackColor = true;
-            this.button_insert.Click += new System.EventHandler(this.button_insert_Click);
-            // 
-            // button_itemUp
-            // 
-            this.button_itemUp.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_itemUp.Location = new System.Drawing.Point(424, 468);
-            this.button_itemUp.Name = "button_itemUp";
-            this.button_itemUp.Size = new System.Drawing.Size(75, 23);
-            this.button_itemUp.TabIndex = 8;
-            this.button_itemUp.Text = "↑";
-            this.button_itemUp.UseVisualStyleBackColor = true;
-            this.button_itemUp.Click += new System.EventHandler(this.button_itemUp_Click);
-            // 
-            // button_itemDown
-            // 
-            this.button_itemDown.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_itemDown.Location = new System.Drawing.Point(505, 468);
-            this.button_itemDown.Name = "button_itemDown";
-            this.button_itemDown.Size = new System.Drawing.Size(75, 23);
-            this.button_itemDown.TabIndex = 9;
-            this.button_itemDown.Text = "↓";
-            this.button_itemDown.UseVisualStyleBackColor = true;
-            this.button_itemDown.Click += new System.EventHandler(this.button_itemDown_Click);
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.BackColor = System.Drawing.Color.White;
+            this.lblMessage.Font = new System.Drawing.Font("Gloucester MT Extra Condensed", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMessage.Location = new System.Drawing.Point(4, 102);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(532, 135);
+            this.lblMessage.TabIndex = 2;
+            this.lblMessage.Text = "label2\r\nas\r\nsda\r\nfas\r\ndasf\r\ndsa\r\ns";
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMessage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MessageDialog_MouseDown);
+            this.lblMessage.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MessageDialog_MouseMove);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1008, 503);
-            this.Controls.Add(this.button_itemDown);
-            this.Controls.Add(this.button_itemUp);
-            this.Controls.Add(this.button_insert);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button_DataSetLoad);
-            this.Controls.Add(this.button_DataSetSave);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(536, 341);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = "DataEdditer";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetMenuItemsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_MenuItems)).EndInit();
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxOnly)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxBatu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBoxMaru)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource dataSetMenuItemsBindingSource;
-        private DataSet_MenuItems dataSet_MenuItems;
-        private System.Windows.Forms.Button button_DataSetSave;
-        private System.Windows.Forms.Button button_DataSetLoad;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button_insert;
-        private System.Windows.Forms.Button button_itemUp;
-        private System.Windows.Forms.Button button_itemDown;
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pBoxMaru;
+        private System.Windows.Forms.PictureBox pBoxBatu;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pBoxOnly;
     }
 }
 

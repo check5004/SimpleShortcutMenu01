@@ -93,6 +93,36 @@ namespace SimpleShortcutMenu01.Properties {
         /// <summary>
         ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
         /// </summary>
+        internal static System.Drawing.Bitmap Batu {
+            get {
+                object obj = ResourceManager.GetObject("Batu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap BatuGray {
+            get {
+                object obj = ResourceManager.GetObject("BatuGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap BatuLightRed {
+            get {
+                object obj = ResourceManager.GetObject("BatuLightRed", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
         internal static System.Drawing.Bitmap CalcDarkYellow {
             get {
                 object obj = ResourceManager.GetObject("CalcDarkYellow", resourceCulture);
@@ -251,21 +281,51 @@ namespace SimpleShortcutMenu01.Properties {
         }
         
         /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap Maru {
+            get {
+                object obj = ResourceManager.GetObject("Maru", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap MaruGray {
+            get {
+                object obj = ResourceManager.GetObject("MaruGray", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap MaruLightBlue {
+            get {
+                object obj = ResourceManager.GetObject("MaruLightBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   &lt;DataSet_MenuItems xmlns=&quot;http://tempuri.org/DataSet_MenuItems.xsd&quot;&gt;
-        ///  &lt;DataTable_MenuItems&gt;
-        ///    &lt;menuName&gt;Web&lt;/menuName&gt;
-        ///    &lt;scondMenuName&gt;Google&lt;/scondMenuName&gt;
-        ///    &lt;title&gt;Google&lt;/title&gt;
-        ///    &lt;url&gt;https://google.com&lt;/url&gt;
-        ///    &lt;comment&gt;googleページ&lt;/comment&gt;
-        ///    &lt;imagePath /&gt;
-        ///  &lt;/DataTable_MenuItems&gt;
         ///  &lt;DataTable_MenuItems&gt;
         ///    &lt;menuName&gt;Web&lt;/menuName&gt;
         ///    &lt;scondMenuName&gt;Yahoo&lt;/scondMenuName&gt;
         ///    &lt;title&gt;Yahoo&lt;/title&gt;
         ///    &lt;url&gt;https://www.yahoo.co.jp&lt;/url&gt;
         ///    &lt;comment&gt;Yahooページ&lt;/comment&gt;
+        ///    &lt;imagePath /&gt;
+        ///  &lt;/DataTable_MenuItems&gt;
+        ///  &lt;DataTable_MenuItems&gt;
+        ///    &lt;menuName&gt;Web&lt;/menuName&gt;
+        ///    &lt;scondMenuName&gt;Google&lt;/scondMenuName&gt;
+        ///    &lt;title&gt;Google&lt;/title&gt;
+        ///    &lt;url&gt;https://google.com&lt;/url&gt;
+        ///    &lt;comment&gt;googleページ&lt;/comment&gt;
         ///    &lt;im [残りの文字列は切り詰められました]&quot;; に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string menuItemData {
@@ -390,6 +450,16 @@ namespace SimpleShortcutMenu01.Properties {
         internal static System.Drawing.Bitmap SettingYellow {
             get {
                 object obj = ResourceManager.GetObject("SettingYellow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   型 System.Drawing.Bitmap のローカライズされたリソースを検索します。
+        /// </summary>
+        internal static System.Drawing.Bitmap waku {
+            get {
+                object obj = ResourceManager.GetObject("waku", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

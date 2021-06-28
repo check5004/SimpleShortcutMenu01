@@ -142,7 +142,7 @@ namespace SimpleShortcutMenu01 {
                     try {
                         switch ( secondMenuItemData["url"].ToString () ) {
                             case "Form1":  // DataGridViewForm
-                                Form1 form1 = new Form1 ();
+                                DataGridViewForm form1 = new DataGridViewForm ();
                                 form1.Show ();
                                 break;
                             case "Logout":

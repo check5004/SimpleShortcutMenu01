@@ -127,6 +127,15 @@
   <data name="AppYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AppYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Batu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Batu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BatuGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BatuGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BatuLightRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BatuLightRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CalcDarkYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CalcDarkYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,6 +184,15 @@
   <data name="InternetYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\InternetYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Maru" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maru.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaruGray" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaruGray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaruLightBlue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaruLightBlue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="menuItemData" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menuItemData.xml;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;shift_jis</value>
   </data>
@@ -213,5 +231,8 @@
   </data>
   <data name="SettingYellow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SettingYellow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="waku" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\waku.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
