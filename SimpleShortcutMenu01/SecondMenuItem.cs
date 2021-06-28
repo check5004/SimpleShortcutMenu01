@@ -43,7 +43,7 @@ namespace SimpleShortcutMenu01 {
             this.pictureBox1.Image = Properties.Resources.NotFoundGray;
             _getImageWorker.RunWorkerAsync ();
 
-            this.BackColor = Color.FromArgb ( 200,200,200 );
+            this.BackColor = Color.FromArgb ( 200, 200, 200 );
         }
 
         #region 画像取得
@@ -132,7 +132,7 @@ namespace SimpleShortcutMenu01 {
                         //起動する。プロセスが起動した時はTrueを返す。
                         p.Start ();
                     } catch {
-                        MessageBox.Show ( "アプリを起動できません。" );
+                        MainMenuItem.iCanNotActivateTheApp ();
                     }
                     break;
                 case "Folder":
@@ -142,8 +142,8 @@ namespace SimpleShortcutMenu01 {
                     try {
                         switch ( secondMenuItemData["url"].ToString () ) {
                             case "Form1":  // DataGridViewForm
-                                DataGridViewForm form1 = new DataGridViewForm ();
-                                form1.Show ();
+                                DataGridViewForm dataGridViewForm = new DataGridViewForm ();
+                                dataGridViewForm.Show ();
                                 break;
                             case "Logout":
                                 try { Config.mainMenuShowForm.Close (); } catch { }
@@ -162,21 +162,35 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SecoundMenuItemMouseHover ( object sender, EventArgs e ) {
-            if ( webPreviewDialog != null ) {
-                webPreviewDialog.Close ();
-                webPreviewDialog = null;
-            }
+
+            //if ( webPreviewDialog != null ) {
+            //    webPreviewDialog.Close ();
+            //    webPreviewDialog = null;
+            //}
 
             switch ( selectMainMenuItemName ) {
                 case "Web":
                     // web preview show!!
-                    webPreviewDialog = new WebPreviewDialog ( secondMenuItemData );
-                    webPreviewDialog.Opacity = 0;
-                    webPreviewDialog.Show ();
+                    //webPreviewDialog = new WebPreviewDialog ( secondMenuItemData );
+                    if ( webPreviewDialog == null ) {
+                        webPreviewDialog = new WebPreviewDialog ();
+                    }
+                    webPreviewDialog.Hide ();
+                    webPreviewDialog.RefreshWebPage ( secondMenuItemData );
+
+                    //webPreviewDialog.Opacity = 0;
                     webPreviewDialog.Location = new Point ( Config.secondMenuForm.Location.X + this.Width + 10, Config.secondMenuForm.Location.Y + this.Location.Y + (int)Math.Floor ( (double)this.Height / 2 ) - (int)Math.Floor ( (double)webPreviewDialog.maxHeight / 2 ) );
-                    webPreviewDialog.Opacity = 100;
+                    webPreviewDialog.Show (this);
+                    //webPreviewDialog.Opacity = 100;
                     Config.secondMenuForm.Opacity = 100;
                     break;
+            }
+
+            for ( int i = 0; i < MainMenuShow.mainMenuItem.Count; i++ ) {
+                if ( (string)Config.dataSet_MenuItems.Rows[i]["menuName"] == selectMainMenuItemName ) {
+                    MainMenuShow.mainMenuItem[i].MainMenuItem_MouseLeave ( sender, e );
+                    break;
+                }
             }
         }
 
@@ -186,11 +200,12 @@ namespace SimpleShortcutMenu01 {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void SecoundMenuItemMouseLeave ( object sender, EventArgs e ) {
-            this.BackColor = Color.FromArgb ( 200,200,200 );
-            if ( webPreviewDialog != null ) {
-                webPreviewDialog.Close ();
-                webPreviewDialog = null;
-            }
+            this.BackColor = Color.FromArgb ( 200, 200, 200 );
+            //if ( webPreviewDialog != null ) {
+            //    webPreviewDialog.Close ();
+            //    webPreviewDialog = null;
+            //}
+            webPreviewDialog?.Hide ();
         }
 
 

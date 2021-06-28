@@ -5,7 +5,7 @@
     <title>Yahoo</title>
     <url>https://www.yahoo.co.jp</url>
     <comment>Yahooページ</comment>
-    <imagePath />
+    <imagePath>https://www.yahoo.co.jp/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -13,7 +13,7 @@
     <title>Google</title>
     <url>https://google.com</url>
     <comment>googleページ</comment>
-    <imagePath />
+    <imagePath>https://google.com/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -29,7 +29,7 @@
     <title>GitHub</title>
     <url>https://github.com</url>
     <comment>github</comment>
-    <imagePath />
+    <imagePath>https://github.com/favicon.ico</imagePath>
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -37,6 +37,14 @@
     <title>Amazon</title>
     <url>https://amazon.com</url>
     <comment>Amazon</comment>
+    <imagePath>https://amazon.com/favicon.ico</imagePath>
+  </DataTable_MenuItems>
+  <DataTable_MenuItems>
+    <menuName>Web</menuName>
+    <scondMenuName>Jyantama</scondMenuName>
+    <title>雀魂</title>
+    <url>https://game.mahjongsoul.com</url>
+    <comment>まーじゃん</comment>
     <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>

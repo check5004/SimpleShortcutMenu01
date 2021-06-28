@@ -118,7 +118,7 @@ namespace SimpleShortcutMenu01
             // webBrowser1
             // 
             this.webBrowser1.Location = new System.Drawing.Point(0, 3);
-            this.webBrowser1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.webBrowser1.Margin = new System.Windows.Forms.Padding(0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
             this.webBrowser1.ScrollBarsEnabled = false;
@@ -141,6 +141,7 @@ namespace SimpleShortcutMenu01
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "WebPreviewDialog";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.TransparencyKey = System.Drawing.Color.Gray;
             this.Load += new System.EventHandler(this.Form1_Load);

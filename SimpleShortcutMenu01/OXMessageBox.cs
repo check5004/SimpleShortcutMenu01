@@ -8,12 +8,12 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace SimpleShortcutMenu01 {
-    public partial class Form1 : Form {
+    public partial class OXMessageBox : Form {
         //Btnメソッドのreturn用の変数
         bool flag = true;
 
         //引数が1つの場合、左右の〇✕ボタンは非表示にする
-        public Form1 ( string title, string message, bool OX ) {
+        public OXMessageBox ( string title, string message, bool OX ) {
             InitializeComponent ();
             lblTitle.Text = title;
             lblMessage.Text = message;
@@ -31,20 +31,18 @@ namespace SimpleShortcutMenu01 {
             }
         }
 
-        public Form1 () {
+        public OXMessageBox () {
             InitializeComponent ();
 
-            //Form1 form1 = new Form1 ( "test", "testtest", false );
-            //form1.Show ();
-            using ( Form1 dlg = new Form1 ( "test", "testtest", false ) ) {
-                if ( dlg.ShowDialog () == DialogResult.OK ) {
-                    //OKがクリックされた場合
-                    MessageBox.Show ( "ok" );
-                } else {
-                    //キャンセルがクリックされた場合
-                    MessageBox.Show ( "キャンセルされました。" );
-                }
-            }
+            //using ( OXMessageBox dlg = new OXMessageBox ( "test", "testtest", false ) ) {
+            //    if ( dlg.ShowDialog () == DialogResult.OK ) {
+            //        //OKがクリックされた場合
+            //        MessageBox.Show ( "ok" );
+            //    } else {
+            //        //キャンセルがクリックされた場合
+            //        MessageBox.Show ( "キャンセルされました。" );
+            //    }
+            //}
         }
 
 

@@ -25,7 +25,7 @@ namespace SimpleShortcutMenu01 {
         /// <summary>
         /// セカンドメニューフォームのFormデータ
         /// </summary>
-        public static System.Windows.Forms.Form secondMenuForm { get; set; }
+        public static Form secondMenuForm { get; set; }
         public static bool secondMenuFormInMouse { get; set; }
 
         /// <summary>

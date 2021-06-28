@@ -14,10 +14,12 @@ namespace SimpleShortcutMenu01 {
         public int maxHeight { get; set; }
         private DataRow secondMenuItemData;
 
-        public WebPreviewDialog ( DataRow secondMenuItemData ) {
-            InitializeComponent ();
+        internal void RefreshWebPage ( DataRow secondMenuItemData ) {
             this.secondMenuItemData = secondMenuItemData;
-            textBox1.Text = secondMenuItemData["url"].ToString();
+            textBox1.Text = secondMenuItemData?["url"]?.ToString ();
+        }
+        public WebPreviewDialog ( ) {
+            InitializeComponent ();
             maxHeight = 380;  // 高さ上限
         }
 
@@ -95,5 +97,6 @@ namespace SimpleShortcutMenu01 {
             }
             this.Height += 35;
         }
+
     }
 }

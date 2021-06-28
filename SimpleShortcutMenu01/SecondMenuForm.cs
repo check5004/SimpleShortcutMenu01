@@ -89,6 +89,12 @@ namespace SimpleShortcutMenu01 {
         // 非アクティブ化時
         private void SecondMenuForm_Deactivate ( object sender, EventArgs e ) {
             Config.secondMenuForm.Opacity = 0;
+            for ( int i = 0; i < MainMenuShow.mainMenuItem.Count; i++ ) {
+                if ( (string)Config.dataSet_MenuItems.Rows[i]["menuName"] == selectMainMenuItemName ) {
+                    MainMenuShow.mainMenuItem[i].MainMenuItem_MouseLeave ( sender, e );
+                    break;
+                }
+            }
         }
     }
 }

@@ -138,7 +138,7 @@ namespace SimpleShortcutMenu01 {
                     p.StartInfo.FileName = "dentaku.exe";
                     p.Start ();
                 } catch {
-                    MessageBox.Show ( "アプリを起動できません。" );
+                    iCanNotActivateTheApp ();
                 }
                 return;
             }
@@ -148,7 +148,7 @@ namespace SimpleShortcutMenu01 {
                     p.StartInfo.FileName = "copy.exe";
                     p.Start ();
                 } catch {
-                    MessageBox.Show ( "アプリを起動できません。" );
+                    iCanNotActivateTheApp ();
                 }
                 return;
             }
@@ -157,6 +157,12 @@ namespace SimpleShortcutMenu01 {
             Layered.UpdateLayer ( this, imageYellow, 220 );
             // セカンドメニュー表示
             SecondMenuItemView ( sender );
+        }
+
+        public static void iCanNotActivateTheApp () {
+            using ( OXMessageBox dlg = new OXMessageBox ( "ERROR", "I can't activate the app.", false ) ) {
+                dlg.ShowDialog ();
+            }
         }
 
         /// <summary>
@@ -180,9 +186,13 @@ namespace SimpleShortcutMenu01 {
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MainMenuItem_MouseLeave ( object sender, EventArgs e ) {
-            // 透過画像表示
-            Layered.UpdateLayer ( this, imageGray, 220 );
+        public void MainMenuItem_MouseLeave ( object sender, EventArgs e ) {
+            if ( Config.secondMenuForm == null || Config.secondMenuForm.Opacity == 0 ) {
+                // 透過画像表示
+                Layered.UpdateLayer ( this, imageGray, 220 );
+            } else {
+                Layered.UpdateLayer ( this, imageYellow, 220 );
+            }
         }
 
         /// <summary>
