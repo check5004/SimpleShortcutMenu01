@@ -5,7 +5,7 @@
     <title>Yahoo</title>
     <url>https://www.yahoo.co.jp</url>
     <comment>Yahooページ</comment>
-    <imagePath>https://www.yahoo.co.jp/favicon.ico</imagePath>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -13,7 +13,7 @@
     <title>Google</title>
     <url>https://google.com</url>
     <comment>googleページ</comment>
-    <imagePath>https://google.com/favicon.ico</imagePath>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -29,7 +29,7 @@
     <title>GitHub</title>
     <url>https://github.com</url>
     <comment>github</comment>
-    <imagePath>https://github.com/favicon.ico</imagePath>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -37,7 +37,7 @@
     <title>Amazon</title>
     <url>https://amazon.com</url>
     <comment>Amazon</comment>
-    <imagePath>https://amazon.com/favicon.ico</imagePath>
+    <imagePath />
   </DataTable_MenuItems>
   <DataTable_MenuItems>
     <menuName>Web</menuName>
@@ -59,7 +59,7 @@
     <menuName>App</menuName>
     <scondMenuName>Word</scondMenuName>
     <title>Word</title>
-    <url>C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE</url>
+    <url>C:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE</url>
     <comment>Microsoft Office</comment>
     <imagePath />
   </DataTable_MenuItems>
@@ -67,7 +67,7 @@
     <menuName>App</menuName>
     <scondMenuName>Excel</scondMenuName>
     <title>Excel</title>
-    <url>C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE</url>
+    <url>C:\Program Files (x86)\Microsoft Office\root\Office16\EXCEL.EXE</url>
     <comment>Microsoft Office</comment>
     <imagePath />
   </DataTable_MenuItems>
@@ -75,7 +75,7 @@
     <menuName>App</menuName>
     <scondMenuName>Power Point</scondMenuName>
     <title>Power Point</title>
-    <url>C:\Program Files\Microsoft Office\root\Office16\POWERPNT.EXE</url>
+    <url>C:\Program Files (x86)\Microsoft Office\root\Office16\POWERPNT.EXE</url>
     <comment>Microsoft Office</comment>
     <imagePath />
   </DataTable_MenuItems>
