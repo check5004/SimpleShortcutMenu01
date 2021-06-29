@@ -115,7 +115,7 @@ namespace SimpleShortcutMenu01 {
 
         private static int GWL_EXSTYLE = -20;
         private static int WS_EX_LAYERED = 0x80000;
-        private static int LWA_ALPHA = 0x2;
+        //private static int LWA_ALPHA = 0x2;
 
 
         [DllImport ( "user32.dll", ExactSpelling = true, SetLastError = true )]

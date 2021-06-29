@@ -21,6 +21,7 @@ namespace SimpleShortcutMenu01 {
             this.mainMenuItemName = mainMenuItemName;
         }
 
+        // Load
         private void MainMenuItem_Load ( object sender, EventArgs e ) {
             imageGray = Properties.Resources.InternetGray;  // default
             switch ( this.mainMenuItemName ) {
@@ -80,6 +81,7 @@ namespace SimpleShortcutMenu01 {
                 }
             }
 
+            // 各アイテムの位置変更
             int count1 = 1;
             int count2 = 1;
             for ( int i = formi - 1; i >= 0; i-- ) {
@@ -96,8 +98,8 @@ namespace SimpleShortcutMenu01 {
         }
 
 
-        #region マウス操作イベント群
-        //private Point mousePoint;
+        #region マウス操作イベント
+        // マウスのキーが押された
         private void MainMenuItem_MouseDown ( object sender, MouseEventArgs e ) {
             if ( ( e.Button & MouseButtons.Left ) == MouseButtons.Left ) {
                 Config.mousePoint = e.Location;
@@ -107,6 +109,7 @@ namespace SimpleShortcutMenu01 {
             }
         }
 
+        // マウスが動いた
         private void MainMenuItem_MouseMove ( object sender, MouseEventArgs e ) {
             if ( ( e.Button & MouseButtons.Left ) == MouseButtons.Left ) {
                 this.Left += e.X - Config.mousePoint.X;
@@ -119,15 +122,11 @@ namespace SimpleShortcutMenu01 {
                 }
             }
         }
-
-        private void MainMenuItem_DoubleClick ( object sender, EventArgs e ) {
-            //Close ();
-        }
-        #endregion マウス操作イベント群
+        #endregion マウス操作イベント
 
 
         /// <summary>
-        /// マウスクリックイベント
+        /// マウスクリック
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -159,6 +158,9 @@ namespace SimpleShortcutMenu01 {
             SecondMenuItemView ( sender );
         }
 
+        /// <summary>
+        /// Error message dialog "I can't activate the app."
+        /// </summary>
         public static void iCanNotActivateTheApp () {
             using ( OXMessageBox dlg = new OXMessageBox ( "ERROR", "I can't activate the app.", false ) ) {
                 dlg.ShowDialog ();

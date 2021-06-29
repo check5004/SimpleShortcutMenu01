@@ -38,7 +38,6 @@ namespace SimpleShortcutMenu01 {
             this.Load += new System.EventHandler(this.MainMenuItem_Load);
             this.LocationChanged += new System.EventHandler(this.MainMenuItem_LocationChanged);
             this.Click += new System.EventHandler(this.MainMenuItem_Click);
-            this.DoubleClick += new System.EventHandler(this.MainMenuItem_DoubleClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainMenuItem_MouseDown);
             this.MouseEnter += new System.EventHandler(this.MainMenuItem_MouseEnter);
             this.MouseLeave += new System.EventHandler(this.MainMenuItem_MouseLeave);
